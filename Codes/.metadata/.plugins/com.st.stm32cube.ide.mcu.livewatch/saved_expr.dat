@@ -1,0 +1,17 @@
+htim1.Instance->CCR1
+gpio_db_array
+active_pattern
+current_step
+busy
+__HAL_TIM_GET_COUNTER(braille_timer)
+activation_time
+comms_state
+original_word
+my_letter
+is_anchor
+is_first
+my_index
+temp_buffer_left
+circ_left
+CMD
+index

@@ -1,0 +1,9 @@
+Manufacturer=Diodes Incorporated
+PartNumber=AP7583AQ-33MP-13
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=9
+Version=5.1
+Released=2023-06-13 08:39:27
+Downloaded=2025-04-28 19:55:08
+3D=Y

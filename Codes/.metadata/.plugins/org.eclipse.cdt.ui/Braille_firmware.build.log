@@ -1,0 +1,10 @@
+15:51:46 **** Incremental Build of configuration Debug for project Braille_firmware ****
+make -j12 all 
+arm-none-eabi-size  Braille_firmware.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28112	     96	   2664	  30872	   7898	Braille_firmware.elf
+Finished building: default.size.stdout
+ 
+
+15:51:46 Build Finished. 0 errors, 0 warnings. (took 272ms)
+

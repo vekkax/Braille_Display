@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AP7583AQ-33MP-13
+D Linear Voltage Regulator IC Positive Fixed 1 Output 300mA 8-MSOP-EP
+K
+F https://www.diodes.com/assets/Datasheets/AP7583Q_AQ.pdf
+$ENDCMP
+#
+#End Doc Library

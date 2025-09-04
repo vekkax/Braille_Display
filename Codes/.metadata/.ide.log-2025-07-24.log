@@ -1,0 +1,444 @@
+2025-07-26 14:29:21,815 [INFO] WebApp:194 - Connection lost
+2025-07-26 14:29:33,809 [INFO] WebApp:191 - Connection restablished
+2025-07-26 14:29:36,384 [INFO] WebApp:194 - Connection lost
+2025-07-26 14:29:37,186 [INFO] WebApp:191 - Connection restablished
+2025-07-26 14:29:47,923 [INFO] WebApp:194 - Connection lost
+2025-07-26 14:29:48,247 [INFO] WebApp:191 - Connection restablished
+2025-07-26 14:30:08,289 [INFO] WebApp:194 - Connection lost
+2025-07-26 14:30:15,059 [INFO] WebApp:191 - Connection restablished
+2025-07-26 14:30:16,697 [INFO] WebApp:194 - Connection lost
+2025-07-26 14:30:16,894 [INFO] WebApp:191 - Connection restablished
+2025-07-26 14:32:00,881 [INFO] WebApp:194 - Connection lost
+2025-07-26 14:32:01,407 [INFO] WebApp:191 - Connection restablished
+2025-07-26 14:43:12,341 [INFO] MainUpdater:2872 - connection check result : 10
+2025-07-26 14:43:12,341 [INFO] MainUpdater:2872 - connection check result : 10
+2025-07-26 14:43:13,020 [INFO] MicroXplorer:468 - Change Database Path : 
+2025-07-26 14:43:13,020 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.141
+2025-07-26 14:43:13,921 [ERROR] ProjectManagerView:395 - 
+java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()" because the return value of "java.util.List.get(int)" is null
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab$9.caretUpdate(ProjectChoiceTab.java:2678) ~[filemanager.jar:?]
+	at javax.swing.text.JTextComponent.fireCaretUpdate(JTextComponent.java:408) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.fire(JTextComponent.java:4484) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.stateChanged(JTextComponent.java:4506) ~[?:?]
+	at javax.swing.text.DefaultCaret.fireStateChanged(DefaultCaret.java:857) ~[?:?]
+	at javax.swing.text.DefaultCaret.changeCaretPosition(DefaultCaret.java:1343) ~[?:?]
+	at javax.swing.text.DefaultCaret.handleSetDot(DefaultCaret.java:1242) ~[?:?]
+	at javax.swing.text.DefaultCaret.setDot(DefaultCaret.java:1223) ~[?:?]
+	at javax.swing.text.DefaultCaret$Handler.insertUpdate(DefaultCaret.java:1819) ~[?:?]
+	at javax.swing.text.AbstractDocument.fireInsertUpdate(AbstractDocument.java:227) ~[?:?]
+	at javax.swing.text.AbstractDocument.handleInsertString(AbstractDocument.java:781) ~[?:?]
+	at javax.swing.text.AbstractDocument.insertString(AbstractDocument.java:740) ~[?:?]
+	at javax.swing.text.PlainDocument.insertString(PlainDocument.java:131) ~[?:?]
+	at javax.swing.text.AbstractDocument.replace(AbstractDocument.java:699) ~[?:?]
+	at javax.swing.text.JTextComponent.setText(JTextComponent.java:1725) ~[?:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.createHeapStackFields(ProjectChoiceTab.java:979) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.buildLinkSettingsPanel(ProjectChoiceTab.java:3766) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.defineWindowsFields(ProjectChoiceTab.java:1962) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.updateSettings(ProjectChoiceTab.java:555) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectSettingsPanel.UpdateDialog(ProjectSettingsPanel.java:245) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.ProjectManagerView.propertyChange(ProjectManagerView.java:392) ~[filemanager.jar:?]
+	at java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268) ~[?:?]
+	at com.st.microxplorer.util.MXPropertyChangeSupport.firePropertyChange(MXPropertyChangeSupport.java:54) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.mxsystem.MxSystem.closeConfig(MxSystem.java:899) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.maingui.MainPanel.closeConfig(MainPanel.java:789) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.loadConfigurationFile(OpenFileManager.java:287) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:341) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:319) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.FileManagerView.getSpecificTask(FileManagerView.java:246) ~[filemanager.jar:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor.getMxTabbedPaneInstance(CubeMxEditor.java:1198) ~[com.st.stm32cube.common.mx_6.14.1.202504091515/:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor$12$1.createSwingComponent(CubeMxEditor.java:1068) ~[com.st.stm32cube.common.mx_6.14.1.202504091515/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite.doComponentCreation(EmbeddedSwingComposite.java:492) ~[com.st.stm32cube.common.mx.oss_6.14.1.202504091515/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite$4.run(EmbeddedSwingComposite.java:291) ~[com.st.stm32cube.common.mx.oss_6.14.1.202504091515/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment$2.run(AwtEnvironment.java:166) ~[com.st.stm32cube.common.mx.oss_6.14.1.202504091515/:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+2025-07-26 14:43:14,926 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2025-07-26 14:43:14,926 [INFO] ThirdParty:873 - entering critical section [close project]
+2025-07-26 14:43:14,949 [INFO] ThirdParty:883 - exiting critical section [close project]
+2025-07-26 14:43:15,036 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
+2025-07-26 14:43:15,602 [WARN] IpParametersView:155 - Warning: This peripheral hasn't parameters
+2025-07-26 14:43:15,737 [WARN] MainPanel:289 - <html><b><center>Warning: This peripheral has no parameters to be configured<br></b></html>
+2025-07-26 14:43:16,274 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 654867120 Bytes (1073741824)
+2025-07-26 14:43:16,332 [INFO] MicroXplorer:468 - Change Database Path : 
+2025-07-26 14:43:16,332 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.141
+2025-07-26 14:43:16,334 [INFO] OpenFileManager:354 - Change cursor
+2025-07-26 14:43:16,568 [INFO] RulesReader:64 - Compatibility file has been processed (302 Rules)
+2025-07-26 14:43:16,724 [INFO] Mcu:2011 - Initializing MCU STM32C031G(4-6)Ux STM32C031G6Ux STM32C031G6U6
+2025-07-26 14:43:19,595 [INFO] Context:756 - Trying to add GPIOservice into a context  which must be forbidden
+2025-07-26 14:43:24,329 [INFO] ImportTextPane:218 - (OptionalMessage_ERROR) Pin21 (VP_RIF_VS_RIF1) cannot be retrieved for this MCU
+2025-07-26 14:43:24,824 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,824 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,824 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,824 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,824 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,824 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,833 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2025-07-26 14:43:24,864 [WARN] ModelPack:524 - Component already loaded: STMicroelectronics:HAL Drivers:0.0.0:STMicroelectronics:Device:STMicro_Driver:XSPI:HAL::0.0.1:HAL_XSPI
+2025-07-26 14:43:24,994 [INFO] RtosManager:558 - Registered RTOS mode: class=RTOS, group=ThreadX, mode=Core, owner=THREADX
+2025-07-26 14:43:25,106 [INFO] ThirdPartyModel:298 - Start build external matchings
+2025-07-26 14:43:26,699 [INFO] ThirdPartyModel:316 - End build external matchings
+2025-07-26 14:43:26,743 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:26,743 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:26,743 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:26,743 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:26,977 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 853368632 Bytes (1073741824)
+2025-07-26 14:43:27,012 [INFO] ApiDb:581 - Connected to CubeFinder SQLite database (C:\Users\santiago\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2025-07-26 14:43:27,316 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2025-07-26 14:43:27,316 [INFO] ThirdParty:835 - entering critical section [change project]
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-PM33A1 1.0.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.4.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.2
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.1
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Avnet-IotConnect X-CUBE-IoTC-DA16k-PMOD 1.0.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-WB05N 1.1.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.1.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.2.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ST60 1.0.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC12 1.0.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.1.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.0.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DPower 1.2.0
+2025-07-26 14:43:27,316 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.4.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC10 1.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 4.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.3.1
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.1.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 10.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-STAIOTCFT 1.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.1.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DPower 1.3.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 5.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfMQTT 1.19.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.3.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC9 1.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.1.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TCPP 4.1.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.2.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 4.1.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-IPS 3.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 7.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 7.0.1
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.25.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 10.1.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-STBOX1 2.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.2.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SAFEA1 1.2.2
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.1.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2025-07-26 14:43:27,317 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :EmbeddedOffice I-CUBE-FS-RTOS 1.0.1
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Cesanta I-CUBE-Mongoose 7.13.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-WB05N 2.0.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 2.0.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TCPP 4.2.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :RealThread X-CUBE-RT-Thread_Nano 4.1.1
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :quantropi X-CUBE-qispace-sdk-base 1.9.3
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-IPS 3.1.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.2
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.7.4
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.9.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.24.1
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfTPM 3.4.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ST67W61 1.0.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.4.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.3.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.0.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.2
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.3
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 9.1.0
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.6.1
+2025-07-26 14:43:27,318 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSH 1.4.17
+2025-07-26 14:43:27,318 [INFO] ThirdParty:841 - exiting critical section [change project]
+2025-07-26 14:43:27,611 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
+2025-07-26 14:43:27,672 [INFO] PinOutPanel:1589 - setPackage(STM32C031G6Ux,UFQFPN28)
+2025-07-26 14:43:28,154 [INFO] UtilMem:75 - Before build in PCC Used Memory: 930866560 Bytes (1073741824)
+2025-07-26 14:43:29,097 [INFO] UtilMem:75 - After build in PCC Used Memory: 674623192 Bytes (1073741824)
+2025-07-26 14:43:29,126 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,127 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,128 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,129 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-07-26 14:43:29,250 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,250 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,250 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,250 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,363 [INFO] CADModel:165 - CPN selected for project levelSTM32C031G6U6
+2025-07-26 14:43:29,363 [INFO] CADModel:114 - Register for checkConnection events
+2025-07-26 14:43:29,427 [INFO] OpenFileManager:385 - Restore cursor
+2025-07-26 14:43:29,632 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,632 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,632 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,632 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,634 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,634 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,634 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:43:29,634 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 14:47:54,704 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 14:47:54,704 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:47:54,704 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:47:54,704 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 14:47:57,822 [INFO] I2cTimingTraitement:330 - 0x00402D41
+2025-07-26 14:48:05,538 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:05,538 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:05,538 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:05,538 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:08,832 [INFO] I2cTimingTraitement:330 - 0x00402D41
+2025-07-26 14:48:13,987 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:13,987 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:13,987 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:13,987 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:15,186 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:15,187 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:15,187 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 14:48:15,187 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 15:31:24,150 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 986618920 Bytes (1073741824)
+2025-07-26 15:31:24,242 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 997262488 Bytes (1073741824)
+2025-07-26 15:31:26,743 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 704516440 Bytes (1073741824)
+2025-07-26 15:31:27,315 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8C0
+2025-07-26 15:31:27,315 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-07-26 15:31:27,315 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-07-26 15:31:27,315 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-07-26 15:31:27,315 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-07-26 15:31:27,315 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-07-26 15:31:27,315 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-07-26 15:31:27,316 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-07-26 15:31:27,317 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-07-26 15:31:27,347 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 15:31:27,347 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 15:31:27,347 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 15:31:27,347 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 15:31:27,459 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\license.tmp_save
+2025-07-26 15:31:27,764 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\license.tmp
+2025-07-26 15:31:27,987 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\gpio.tmp_save
+2025-07-26 15:31:28,127 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\gpio.tmp
+2025-07-26 15:31:28,936 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\cortex.tmp_save
+2025-07-26 15:31:29,010 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\cortex.tmp
+2025-07-26 15:31:29,027 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_it.c_save
+2025-07-26 15:31:29,184 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_it.c
+2025-07-26 15:31:29,190 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_it.h_save
+2025-07-26 15:31:29,285 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_it.h
+2025-07-26 15:31:29,453 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_hal_msp.c_save
+2025-07-26 15:31:29,641 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_hal_msp.c
+2025-07-26 15:31:29,648 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\system.tmp_save
+2025-07-26 15:31:29,793 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\system.tmp
+2025-07-26 15:31:29,806 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_hal_conf.h_save
+2025-07-26 15:31:29,889 [INFO] CodeEngine:343 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_hal_conf.h
+2025-07-26 15:31:29,906 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_PClockConfig is not available in your config.xml file
+2025-07-26 15:31:29,907 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2025-07-26 15:31:29,916 [INFO] ApiDbMcu:508 - Load IP Config File for I2C1
+2025-07-26 15:31:29,933 [INFO] ApiDbMcu:508 - Load IP Config File for TIM1
+2025-07-26 15:31:29,945 [INFO] ApiDbMcu:508 - Load IP Config File for USART1
+2025-07-26 15:31:29,957 [INFO] ApiDbMcu:508 - Load IP Config File for USART2
+2025-07-26 15:31:29,960 [INFO] ApiDbMcu:508 - Load IP Config File for RCC
+2025-07-26 15:31:29,961 [WARN] IPConfigManager:3790 - IP not found : TIM
+2025-07-26 15:31:29,963 [WARN] CodeGenerator:4198 - IP not found : null
+2025-07-26 15:31:29,971 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\main.h_save
+2025-07-26 15:31:30,048 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\main.h
+2025-07-26 15:31:30,054 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\main.c_save
+2025-07-26 15:31:30,156 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\main.c
+2025-07-26 15:31:30,497 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 144mS.
+2025-07-26 15:31:30,500 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-07-26 15:31:30,568 [INFO] ConfigFileManager:1590 - The Die is : DIE453
+2025-07-26 15:31:30,572 [INFO] ApiDbMcu:508 - Load IP Config File for FILEX
+2025-07-26 15:31:30,577 [INFO] ApiDbMcu:508 - Load IP Config File for THREADX
+2025-07-26 15:31:31,899 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1399mS.
+2025-07-26 15:31:31,901 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-07-26 15:31:31,904 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-07-26 15:56:10,900 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 688467656 Bytes (1073741824)
+2025-07-26 15:56:10,992 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 702625480 Bytes (1073741824)
+2025-07-26 15:56:13,159 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 782323424 Bytes (1073741824)
+2025-07-26 15:56:13,546 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8C0
+2025-07-26 15:56:13,547 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8C0
+2025-07-26 15:56:13,547 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-07-26 15:56:13,547 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-07-26 15:56:13,547 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-07-26 15:56:13,547 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-07-26 15:56:13,547 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-07-26 15:56:13,547 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-07-26 15:56:13,548 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-07-26 15:56:13,548 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-07-26 15:56:13,573 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 15:56:13,573 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 15:56:13,573 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 15:56:13,573 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 15:56:13,646 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\license.tmp_save
+2025-07-26 15:56:13,867 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\license.tmp
+2025-07-26 15:56:13,984 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\gpio.tmp_save
+2025-07-26 15:56:14,105 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\gpio.tmp
+2025-07-26 15:56:15,003 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\cortex.tmp_save
+2025-07-26 15:56:15,092 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\cortex.tmp
+2025-07-26 15:56:15,106 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_it.c_save
+2025-07-26 15:56:15,313 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_it.c
+2025-07-26 15:56:15,318 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_it.h_save
+2025-07-26 15:56:15,376 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_it.h
+2025-07-26 15:56:15,477 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_hal_msp.c_save
+2025-07-26 15:56:15,595 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_hal_msp.c
+2025-07-26 15:56:15,601 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\system.tmp_save
+2025-07-26 15:56:15,680 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\system.tmp
+2025-07-26 15:56:15,698 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_hal_conf.h_save
+2025-07-26 15:56:15,790 [INFO] CodeEngine:343 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_hal_conf.h
+2025-07-26 15:56:15,809 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_PClockConfig is not available in your config.xml file
+2025-07-26 15:56:15,810 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2025-07-26 15:56:15,838 [INFO] ApiDbMcu:508 - Load IP Config File for TIM3
+2025-07-26 15:56:15,840 [WARN] IPConfigManager:3790 - IP not found : TIM
+2025-07-26 15:56:15,841 [WARN] CodeGenerator:4198 - IP not found : null
+2025-07-26 15:56:15,853 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\main.h_save
+2025-07-26 15:56:15,973 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\main.h
+2025-07-26 15:56:15,981 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\main.c_save
+2025-07-26 15:56:16,162 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\main.c
+2025-07-26 15:56:16,501 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 136mS.
+2025-07-26 15:56:16,505 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-07-26 15:56:16,584 [INFO] ConfigFileManager:1590 - The Die is : DIE453
+2025-07-26 15:56:17,632 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1127mS.
+2025-07-26 15:56:17,634 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-07-26 15:56:17,637 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-07-26 16:56:43,639 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 807457752 Bytes (1073741824)
+2025-07-26 16:56:43,726 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 818510912 Bytes (1073741824)
+2025-07-26 16:56:45,272 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 900778680 Bytes (1073741824)
+2025-07-26 16:56:45,705 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8C0
+2025-07-26 16:56:45,705 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8C0
+2025-07-26 16:56:45,706 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-07-26 16:56:45,706 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-07-26 16:56:45,706 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-07-26 16:56:45,706 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-07-26 16:56:45,706 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-07-26 16:56:45,706 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-07-26 16:56:45,706 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-07-26 16:56:45,708 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-07-26 16:56:45,739 [WARN] IP:2250 - FIFOMode not found: check if there is a RefParameter without a condition.
+2025-07-26 16:56:45,739 [WARN] IP:2250 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 16:56:45,739 [WARN] IP:2250 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2025-07-26 16:56:45,740 [WARN] IP:2250 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2025-07-26 16:56:45,839 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\license.tmp_save
+2025-07-26 16:56:46,158 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\license.tmp
+2025-07-26 16:56:46,307 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\gpio.tmp_save
+2025-07-26 16:56:46,429 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\gpio.tmp
+2025-07-26 16:56:47,419 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\cortex.tmp_save
+2025-07-26 16:56:47,551 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\cortex.tmp
+2025-07-26 16:56:47,569 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_it.c_save
+2025-07-26 16:56:47,864 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_it.c
+2025-07-26 16:56:47,870 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_it.h_save
+2025-07-26 16:56:47,950 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_it.h
+2025-07-26 16:56:48,063 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_hal_msp.c_save
+2025-07-26 16:56:48,190 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\stm32c0xx_hal_msp.c
+2025-07-26 16:56:48,195 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\system.tmp_save
+2025-07-26 16:56:48,257 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\MXTmpFiles\system.tmp
+2025-07-26 16:56:48,265 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_hal_conf.h_save
+2025-07-26 16:56:48,327 [INFO] CodeEngine:343 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\stm32c0xx_hal_conf.h
+2025-07-26 16:56:48,339 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_PClockConfig is not available in your config.xml file
+2025-07-26 16:56:48,339 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2025-07-26 16:56:48,345 [WARN] IPConfigManager:3790 - IP not found : TIM
+2025-07-26 16:56:48,346 [WARN] CodeGenerator:4198 - IP not found : null
+2025-07-26 16:56:48,354 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\main.h_save
+2025-07-26 16:56:48,432 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Inc\main.h
+2025-07-26 16:56:48,438 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\main.c_save
+2025-07-26 16:56:48,550 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\Core\Src\main.c
+2025-07-26 16:56:49,071 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 198mS.
+2025-07-26 16:56:49,076 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-07-26 16:56:49,178 [INFO] ConfigFileManager:1590 - The Die is : DIE453
+2025-07-26 16:56:50,311 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1235mS.
+2025-07-26 16:56:50,312 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-07-26 16:56:50,315 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.

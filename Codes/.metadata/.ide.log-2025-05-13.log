@@ -1,0 +1,1151 @@
+2025-05-13 08:30:01,666 [INFO] WebApp:194 - Connection lost
+2025-05-13 08:30:15,742 [INFO] WebApp:191 - Connection restablished
+2025-05-13 08:41:20,801 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:41:20,922 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:20,922 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:20,923 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:20,923 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:20,998 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:20,998 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:21,061 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:21,062 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:25,633 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:41:25,685 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:25,685 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:25,685 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:25,685 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:25,762 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:25,763 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:25,805 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:25,807 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:39,103 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:41:39,153 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:39,153 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:39,154 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:39,154 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:39,198 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:39,198 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:39,227 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:39,227 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:41,391 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:41:41,435 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:41,435 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:41,435 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:41,435 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:41,462 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:41,462 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:41,488 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:41:41,488 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:43:17,617 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:43:17,680 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:43:28,917 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:43:55,517 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:43:57,136 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:43:58,008 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:43:59,078 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:43:59,159 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:43:59,969 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:44:00,053 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 08:44:00,097 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:44:00,837 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:44:00,962 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:44:01,626 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:44:01,726 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:45:28,553 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:45:28,617 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:45:28,670 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:28,671 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:28,671 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:28,671 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:28,700 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:28,701 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:28,724 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:28,725 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:28,751 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:45:31,474 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:45:31,530 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 08:45:31,547 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:45:31,592 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:31,592 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:31,593 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:31,593 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:31,622 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:31,623 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:31,651 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:31,651 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:45:31,675 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:45:31,747 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 08:45:34,944 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:45:44,959 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:45:44,999 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:45:48,243 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:46:29,021 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:46:53,702 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:48:03,745 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:48:06,634 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,2,27,815x295,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 08:48:08,965 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:48:54,140 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 703290848 Bytes (947912704)
+2025-05-13 08:48:54,271 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 724262368 Bytes (947912704)
+2025-05-13 08:48:55,219 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 813396704 Bytes (947912704)
+2025-05-13 08:48:55,643 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-05-13 08:48:55,643 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-05-13 08:48:55,643 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-05-13 08:48:55,643 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-05-13 08:48:55,643 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-05-13 08:48:55,643 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-05-13 08:48:55,643 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-05-13 08:48:55,644 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_HOST
+2025-05-13 08:48:55,644 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 08:48:55,644 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 08:48:55,644 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-05-13 08:48:55,646 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-05-13 08:48:55,651 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:48:55,651 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:48:55,760 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp_save
+2025-05-13 08:48:56,009 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp
+2025-05-13 08:48:56,071 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp_save
+2025-05-13 08:48:56,211 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp
+2025-05-13 08:48:56,292 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-05-13 08:48:56,303 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2025-05-13 08:48:56,414 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp
+2025-05-13 08:48:56,418 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2025-05-13 08:48:56,501 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp
+2025-05-13 08:48:56,506 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2025-05-13 08:48:56,612 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2025-05-13 08:48:56,617 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2025-05-13 08:48:56,729 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp
+2025-05-13 08:48:57,022 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c_save
+2025-05-13 08:48:57,099 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c
+2025-05-13 08:48:57,105 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h_save
+2025-05-13 08:48:57,172 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h
+2025-05-13 08:48:57,178 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h_save
+2025-05-13 08:48:57,244 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h
+2025-05-13 08:48:57,251 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c_save
+2025-05-13 08:48:57,317 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c
+2025-05-13 08:48:57,324 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c_save
+2025-05-13 08:48:57,384 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c
+2025-05-13 08:48:57,390 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h_save
+2025-05-13 08:48:57,447 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h
+2025-05-13 08:48:57,463 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c_save
+2025-05-13 08:48:57,670 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c
+2025-05-13 08:48:57,676 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h_save
+2025-05-13 08:48:57,759 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h
+2025-05-13 08:48:57,786 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c_save
+2025-05-13 08:48:57,928 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c
+2025-05-13 08:48:57,937 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp_save
+2025-05-13 08:48:58,023 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp
+2025-05-13 08:48:58,042 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h_save
+2025-05-13 08:48:58,157 [INFO] CodeEngine:343 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h
+2025-05-13 08:48:58,204 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h_save
+2025-05-13 08:48:58,289 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h
+2025-05-13 08:48:58,298 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c_save
+2025-05-13 08:48:58,407 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c
+2025-05-13 08:48:58,978 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 361mS.
+2025-05-13 08:48:58,987 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-05-13 08:48:59,075 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-05-13 08:49:00,472 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1485mS.
+2025-05-13 08:49:00,473 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-13 08:49:00,478 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-13 08:55:04,284 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:55:04,327 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:04,329 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:04,329 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:04,329 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:04,358 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:04,358 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:04,390 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:04,390 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:06,627 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:55:06,668 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:06,669 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:06,669 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:06,669 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:06,699 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:06,699 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:06,731 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:06,731 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:09,365 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:55:10,037 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 08:55:13,284 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 08:55:31,573 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 718868448 Bytes (948961280)
+2025-05-13 08:55:31,657 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 739839968 Bytes (948961280)
+2025-05-13 08:55:34,462 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 883008856 Bytes (948961280)
+2025-05-13 08:55:34,868 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-05-13 08:55:34,869 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-05-13 08:55:34,869 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-05-13 08:55:34,869 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-05-13 08:55:34,869 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-05-13 08:55:34,869 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-05-13 08:55:34,869 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-05-13 08:55:34,869 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_HOST
+2025-05-13 08:55:34,869 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 08:55:34,869 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 08:55:34,870 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-05-13 08:55:34,871 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-05-13 08:55:34,874 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:34,874 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 08:55:34,975 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp_save
+2025-05-13 08:55:35,188 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp
+2025-05-13 08:55:35,234 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp_save
+2025-05-13 08:55:35,369 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp
+2025-05-13 08:55:35,457 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-05-13 08:55:35,465 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2025-05-13 08:55:35,566 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp
+2025-05-13 08:55:35,570 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2025-05-13 08:55:35,646 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp
+2025-05-13 08:55:35,650 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2025-05-13 08:55:35,739 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2025-05-13 08:55:35,742 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2025-05-13 08:55:35,818 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp
+2025-05-13 08:55:36,036 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c_save
+2025-05-13 08:55:36,099 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c
+2025-05-13 08:55:36,105 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h_save
+2025-05-13 08:55:36,159 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h
+2025-05-13 08:55:36,164 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h_save
+2025-05-13 08:55:36,219 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h
+2025-05-13 08:55:36,224 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c_save
+2025-05-13 08:55:36,285 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c
+2025-05-13 08:55:36,290 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c_save
+2025-05-13 08:55:36,346 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c
+2025-05-13 08:55:36,351 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h_save
+2025-05-13 08:55:36,413 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h
+2025-05-13 08:55:36,425 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c_save
+2025-05-13 08:55:36,508 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c
+2025-05-13 08:55:36,516 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h_save
+2025-05-13 08:55:36,575 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h
+2025-05-13 08:55:36,595 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c_save
+2025-05-13 08:55:36,682 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c
+2025-05-13 08:55:36,687 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp_save
+2025-05-13 08:55:36,734 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp
+2025-05-13 08:55:36,744 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h_save
+2025-05-13 08:55:36,799 [INFO] CodeEngine:343 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h
+2025-05-13 08:55:36,830 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h_save
+2025-05-13 08:55:36,885 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h
+2025-05-13 08:55:36,890 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c_save
+2025-05-13 08:55:36,992 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c
+2025-05-13 08:55:37,289 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 156mS.
+2025-05-13 08:55:37,294 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-05-13 08:55:37,351 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-05-13 08:55:38,205 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 911mS.
+2025-05-13 08:55:38,207 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-13 08:55:38,211 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-13 09:06:16,771 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:17,390 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:17,639 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:18,255 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:18,982 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:19,816 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:20,286 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:20,552 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:20,743 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:21,489 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:22,225 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:22,414 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:22,658 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:22,810 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:22,981 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:23,156 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:06:26,109 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 611811024 Bytes (948961280)
+2025-05-13 09:06:26,202 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 632243368 Bytes (948961280)
+2025-05-13 09:06:26,893 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 709837992 Bytes (948961280)
+2025-05-13 09:06:27,434 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-05-13 09:06:27,434 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-05-13 09:06:27,434 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-05-13 09:06:27,434 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-05-13 09:06:27,434 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-05-13 09:06:27,434 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-05-13 09:06:27,434 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-05-13 09:06:27,435 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_HOST
+2025-05-13 09:06:27,435 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 09:06:27,435 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 09:06:27,437 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-05-13 09:06:27,437 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-05-13 09:06:27,441 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:06:27,441 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:06:27,624 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp_save
+2025-05-13 09:06:27,807 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp
+2025-05-13 09:06:27,870 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp_save
+2025-05-13 09:06:27,979 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp
+2025-05-13 09:06:28,051 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-05-13 09:06:28,060 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2025-05-13 09:06:28,148 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp
+2025-05-13 09:06:28,152 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2025-05-13 09:06:28,230 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp
+2025-05-13 09:06:28,235 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2025-05-13 09:06:28,327 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2025-05-13 09:06:28,332 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2025-05-13 09:06:28,433 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp
+2025-05-13 09:06:28,725 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c_save
+2025-05-13 09:06:28,809 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c
+2025-05-13 09:06:28,815 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h_save
+2025-05-13 09:06:28,875 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h
+2025-05-13 09:06:28,881 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h_save
+2025-05-13 09:06:28,943 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h
+2025-05-13 09:06:28,950 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c_save
+2025-05-13 09:06:29,014 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c
+2025-05-13 09:06:29,021 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c_save
+2025-05-13 09:06:29,075 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c
+2025-05-13 09:06:29,082 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h_save
+2025-05-13 09:06:29,144 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h
+2025-05-13 09:06:29,159 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c_save
+2025-05-13 09:06:29,218 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c
+2025-05-13 09:06:29,226 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h_save
+2025-05-13 09:06:29,288 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h
+2025-05-13 09:06:29,307 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c_save
+2025-05-13 09:06:29,397 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c
+2025-05-13 09:06:29,402 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp_save
+2025-05-13 09:06:29,453 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp
+2025-05-13 09:06:29,464 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h_save
+2025-05-13 09:06:29,543 [INFO] CodeEngine:343 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h
+2025-05-13 09:06:29,588 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h_save
+2025-05-13 09:06:29,662 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h
+2025-05-13 09:06:29,669 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c_save
+2025-05-13 09:06:29,769 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c
+2025-05-13 09:06:30,186 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 257mS.
+2025-05-13 09:06:30,192 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-05-13 09:06:30,262 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-05-13 09:06:31,401 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1209mS.
+2025-05-13 09:06:31,403 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 2mS.
+2025-05-13 09:06:31,408 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-13 09:07:54,515 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,2,27,797x295,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 09:07:56,742 [INFO] Gpio:277 - dependency for GPIO [I2C1, I2S3, RCC, SPI1, SYS, USART2, USART3, USB_OTG_FS]
+2025-05-13 09:07:58,709 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 396904152 Bytes (948961280)
+2025-05-13 09:07:58,794 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 417353432 Bytes (948961280)
+2025-05-13 09:07:59,418 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 457199320 Bytes (948961280)
+2025-05-13 09:07:59,689 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_HOST
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 09:07:59,690 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-05-13 09:07:59,693 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-05-13 09:07:59,695 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:07:59,696 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:07:59,776 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp_save
+2025-05-13 09:07:59,823 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp
+2025-05-13 09:07:59,847 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp_save
+2025-05-13 09:07:59,909 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp
+2025-05-13 09:07:59,957 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-05-13 09:07:59,967 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2025-05-13 09:08:00,021 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp
+2025-05-13 09:08:00,025 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2025-05-13 09:08:00,076 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp
+2025-05-13 09:08:00,080 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2025-05-13 09:08:00,135 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2025-05-13 09:08:00,140 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2025-05-13 09:08:00,290 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp
+2025-05-13 09:08:00,522 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c_save
+2025-05-13 09:08:00,587 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c
+2025-05-13 09:08:00,594 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h_save
+2025-05-13 09:08:00,664 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h
+2025-05-13 09:08:00,670 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h_save
+2025-05-13 09:08:00,743 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h
+2025-05-13 09:08:00,749 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c_save
+2025-05-13 09:08:00,807 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c
+2025-05-13 09:08:00,812 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c_save
+2025-05-13 09:08:00,863 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c
+2025-05-13 09:08:00,867 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h_save
+2025-05-13 09:08:00,918 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h
+2025-05-13 09:08:00,929 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c_save
+2025-05-13 09:08:00,990 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c
+2025-05-13 09:08:00,994 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h_save
+2025-05-13 09:08:01,042 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h
+2025-05-13 09:08:01,059 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c_save
+2025-05-13 09:08:01,148 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c
+2025-05-13 09:08:01,151 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp_save
+2025-05-13 09:08:01,200 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp
+2025-05-13 09:08:01,209 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h_save
+2025-05-13 09:08:01,264 [INFO] CodeEngine:343 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h
+2025-05-13 09:08:01,287 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h_save
+2025-05-13 09:08:01,347 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h
+2025-05-13 09:08:01,352 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c_save
+2025-05-13 09:08:01,439 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c
+2025-05-13 09:08:01,807 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 155mS.
+2025-05-13 09:08:01,813 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-05-13 09:08:01,869 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-05-13 09:08:02,656 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 843mS.
+2025-05-13 09:08:02,657 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-05-13 09:08:02,663 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-13 09:23:09,254 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:23:09,394 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:24:00,915 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:24:01,128 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:24:03,325 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:24:03,374 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:28:00,563 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:28:00,565 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:28:00,567 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:28:00,617 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,618 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,618 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,618 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,794 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,794 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,795 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,795 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,993 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,993 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,993 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:00,993 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,540 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:28:04,541 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:28:04,541 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:28:04,569 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,570 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,570 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,570 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,654 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,655 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,655 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,656 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,777 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,777 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,778 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:04,778 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:09,904 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:28:09,904 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:28:09,905 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:28:09,928 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:09,929 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:09,929 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:09,930 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:10,034 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:10,034 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:10,034 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:10,034 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:10,207 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:10,207 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:10,207 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:10,208 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:12,964 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:28:12,964 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:28:12,965 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:28:12,984 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:12,985 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:12,985 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:12,985 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:13,062 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:13,062 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:13,062 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:13,062 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:13,171 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:13,171 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:13,172 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:13,172 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,210 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:28:27,210 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:28:27,210 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:28:27,227 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,227 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,228 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,228 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,292 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,293 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,293 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,293 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,437 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,437 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,438 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:27,438 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,512 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:28:28,512 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:28:28,513 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:28:28,532 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,532 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,533 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,533 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,609 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,609 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,610 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,610 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,712 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,712 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,712 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:28,712 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,604 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:28:30,604 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:28:30,605 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:28:30,625 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,626 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,626 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,626 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,689 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,689 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,689 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,689 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,834 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,834 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,834 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:30,834 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:31,882 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:28:31,882 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:28:31,883 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:28:31,917 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:31,917 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:31,917 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:31,917 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:32,013 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:32,013 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:32,013 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:32,013 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:32,109 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:32,109 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:32,109 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:32,110 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,443 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:28:54,443 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:28:54,443 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:28:54,460 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,461 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,461 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,461 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,525 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,525 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,525 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,525 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,627 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,627 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,627 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:28:54,627 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,412 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:29:00,412 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:29:00,413 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:29:00,430 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,430 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,430 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,430 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,497 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,497 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,497 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,497 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,594 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,594 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,595 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:00,595 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,069 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:29:03,069 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:29:03,069 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:29:03,090 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,090 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,091 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,091 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,151 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,151 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,151 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,151 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,256 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,256 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,256 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:03,256 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,490 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:29:21,490 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:29:21,490 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:29:21,509 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,509 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,509 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,509 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,579 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,579 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,579 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,579 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,670 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,670 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,670 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:21,670 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,385 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:29:52,385 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:29:52,385 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:29:52,404 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,404 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,404 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,404 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,465 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,465 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,465 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,465 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,556 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,556 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,556 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:29:52,556 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,434 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:30:20,434 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:30:20,434 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:30:20,451 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,451 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,451 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,451 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,505 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,505 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,505 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,505 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,597 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,597 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,597 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:20,597 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,676 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:30:42,676 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:30:42,676 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:30:42,693 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,693 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,693 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,693 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,747 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,747 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,749 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,749 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,871 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,871 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,871 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:30:42,871 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:01,908 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:31:01,908 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:31:01,909 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:31:01,926 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:01,926 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:01,927 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:01,927 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:01,984 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:01,985 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:01,985 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:01,985 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:02,075 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:02,075 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:02,075 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:02,075 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,030 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:31:04,030 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:31:04,030 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:31:04,047 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,047 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,048 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,048 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,106 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,106 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,106 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,106 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,205 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,205 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,207 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:04,207 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,383 [INFO] I2sManager:658 - 1.92E8
+2025-05-13 09:31:11,383 [INFO] I2sManager:195 - I2S Clock Value : 1.92E8
+2025-05-13 09:31:11,384 [INFO] I2sManager:553 - AudioClock : 93750Divider : 4Odd : 0
+2025-05-13 09:31:11,400 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,400 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,400 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,400 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,467 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,467 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,467 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,467 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,553 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,553 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,553 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:11,553 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,478 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:31:41,478 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:31:41,479 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:31:41,495 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,495 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,495 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,495 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,551 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,551 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,551 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,551 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,639 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,639 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,639 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:31:41,639 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,374 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:01,374 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:01,374 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:01,390 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,390 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,390 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,390 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,445 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,445 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,445 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,445 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,534 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,534 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,534 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:01,534 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,431 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:04,431 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:04,432 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:04,473 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,473 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,473 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,473 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,542 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,542 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,542 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,542 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,634 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,635 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,635 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:04,635 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,815 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:12,815 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:12,815 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:12,839 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,839 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,840 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,840 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,901 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,901 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,902 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,902 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,992 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,992 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,992 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:12,992 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,681 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:18,681 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:18,681 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:18,696 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,696 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,697 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,697 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,752 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,752 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,752 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,752 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,842 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,843 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,843 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:18,843 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,190 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:21,190 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:21,190 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:21,207 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,207 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,207 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,207 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,265 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,265 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,265 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,265 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,352 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,352 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,352 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:21,352 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,745 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:24,745 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:24,745 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:24,762 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,762 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,762 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,762 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,817 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,817 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,817 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,817 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,902 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,902 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,902 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:24,902 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,213 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:29,213 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:29,214 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:29,231 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,232 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,232 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,232 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,288 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,288 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,289 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,289 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,390 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,390 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,390 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:29,390 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,349 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:31,350 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:31,350 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:31,367 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,367 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,367 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,367 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,427 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,427 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,428 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,428 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,520 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,521 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,521 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:31,521 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,016 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:36,016 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:36,016 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:36,032 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,033 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,033 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,033 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,087 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,087 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,087 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,087 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,174 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,174 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,174 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:36,174 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,411 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:38,411 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:38,411 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:38,443 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,443 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,443 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,443 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,500 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,500 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,500 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,500 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,585 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,585 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,585 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:38,585 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:41,884 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:41,884 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:41,884 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:41,901 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:41,901 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:41,901 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:41,901 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:41,957 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:41,957 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:41,957 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:41,957 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:42,044 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:42,044 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:42,045 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:42,045 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,275 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:44,275 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:44,275 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:44,295 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,295 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,295 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,295 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,348 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,348 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,348 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,348 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,434 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,434 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,435 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:44,435 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,309 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:48,309 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:48,310 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:48,328 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,328 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,328 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,328 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,387 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,387 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,388 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,388 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,472 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,472 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,473 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:48,473 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,645 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:50,645 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:50,645 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:50,662 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,662 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,662 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,662 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,718 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,718 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,718 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,718 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,808 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,808 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,808 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:50,808 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:52,994 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:52,994 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:52,995 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:53,011 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,011 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,012 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,012 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,078 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,078 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,078 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,078 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,164 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,164 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,164 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:53,164 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,705 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:32:58,705 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:32:58,705 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:32:58,720 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,721 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,721 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,721 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,774 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,774 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,774 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,774 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,862 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,862 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,862 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:32:58,862 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,014 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:34:52,014 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:34:52,014 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:34:52,034 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,034 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,034 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,034 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,092 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,092 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,093 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,093 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,187 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,188 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,188 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:34:52,188 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,258 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:35:12,258 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:35:12,259 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:35:12,277 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,277 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,277 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,277 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,332 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,332 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,332 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,332 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,421 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,421 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,421 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:12,421 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,282 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:35:14,282 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:35:14,283 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:35:14,318 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,318 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,318 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,318 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,392 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,393 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,393 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,393 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,536 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,537 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,537 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:14,537 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,577 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:35:32,577 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:35:32,577 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:35:32,593 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,593 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,593 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,593 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,649 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,649 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,649 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,649 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,737 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,737 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,737 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:35:32,737 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:36:09,501 [INFO] I2sManager:658 - 9.6E7
+2025-05-13 09:36:09,501 [INFO] I2sManager:195 - I2S Clock Value : 9.6E7
+2025-05-13 09:36:09,502 [INFO] I2sManager:553 - AudioClock : 93750Divider : 2Odd : 0
+2025-05-13 09:36:09,521 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:36:09,521 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:36:09,521 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:36:09,521 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:36:09,590 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:36:09,590 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:36:09,590 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:36:09,590 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:43:08,892 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 09:44:27,879 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 09:45:14,694 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 09:45:14,882 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 673488944 Bytes (948961280)
+2025-05-13 09:45:15,028 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 692885552 Bytes (948961280)
+2025-05-13 09:45:16,018 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 777820208 Bytes (948961280)
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_HOST
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 09:45:16,500 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 09:45:16,501 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-05-13 09:45:16,502 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-05-13 09:45:16,506 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:45:16,507 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:45:16,631 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp_save
+2025-05-13 09:45:16,928 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp
+2025-05-13 09:45:17,000 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp_save
+2025-05-13 09:45:17,167 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp
+2025-05-13 09:45:17,250 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-05-13 09:45:17,260 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2025-05-13 09:45:17,385 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp
+2025-05-13 09:45:17,389 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2025-05-13 09:45:17,475 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp
+2025-05-13 09:45:17,478 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2025-05-13 09:45:17,595 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2025-05-13 09:45:17,599 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2025-05-13 09:45:17,711 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp
+2025-05-13 09:45:18,044 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c_save
+2025-05-13 09:45:18,142 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c
+2025-05-13 09:45:18,147 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h_save
+2025-05-13 09:45:18,232 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h
+2025-05-13 09:45:18,238 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h_save
+2025-05-13 09:45:18,330 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h
+2025-05-13 09:45:18,337 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c_save
+2025-05-13 09:45:18,431 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c
+2025-05-13 09:45:18,437 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c_save
+2025-05-13 09:45:18,517 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c
+2025-05-13 09:45:18,524 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h_save
+2025-05-13 09:45:18,587 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h
+2025-05-13 09:45:18,601 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c_save
+2025-05-13 09:45:18,827 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c
+2025-05-13 09:45:18,834 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h_save
+2025-05-13 09:45:18,900 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h
+2025-05-13 09:45:18,920 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c_save
+2025-05-13 09:45:19,040 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c
+2025-05-13 09:45:19,045 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp_save
+2025-05-13 09:45:19,109 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp
+2025-05-13 09:45:19,120 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h_save
+2025-05-13 09:45:19,198 [INFO] CodeEngine:343 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h
+2025-05-13 09:45:19,234 [INFO] ApiDbMcu:508 - Load IP Config File for TIM2
+2025-05-13 09:45:19,239 [WARN] IPConfigManager:3790 - IP not found : TIM
+2025-05-13 09:45:19,239 [WARN] CodeGenerator:4198 - IP not found : null
+2025-05-13 09:45:19,249 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h_save
+2025-05-13 09:45:19,337 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h
+2025-05-13 09:45:19,343 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c_save
+2025-05-13 09:45:19,458 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c
+2025-05-13 09:45:20,070 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 284mS.
+2025-05-13 09:45:20,080 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-05-13 09:45:20,189 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-05-13 09:45:21,928 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1847mS.
+2025-05-13 09:45:21,929 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-05-13 09:45:21,939 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-13 09:49:50,847 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:49:59,253 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:49:59,254 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:49:59,254 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:49:59,254 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:49:59,300 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:49:59,300 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:49:59,335 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:49:59,335 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:49:59,379 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:50:20,886 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:50:20,957 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:50:20,958 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:50:20,958 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:50:20,958 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:50:20,990 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:50:20,990 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:50:21,020 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:50:21,020 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:50:27,694 [WARN] BspModel:444 - BSP dependency skipped because of component: name='IOExpander', api='Unknown'
+2025-05-13 09:50:45,332 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 09:51:01,370 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 09:51:48,212 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-13 09:51:49,003 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 734648072 Bytes (1045430272)
+2025-05-13 09:51:49,127 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 781830744 Bytes (1045430272)
+2025-05-13 09:51:50,374 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 910831752 Bytes (1045430272)
+2025-05-13 09:51:51,173 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-05-13 09:51:51,173 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8
+2025-05-13 09:51:51,173 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2S
+2025-05-13 09:51:51,173 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-05-13 09:51:51,173 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-05-13 09:51:51,173 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-05-13 09:51:51,173 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-05-13 09:51:51,173 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-05-13 09:51:51,174 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_HOST
+2025-05-13 09:51:51,174 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 09:51:51,174 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-13 09:51:51,175 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-05-13 09:51:51,177 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-05-13 09:51:51,182 [WARN] IP:2250 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2025-05-13 09:51:51,182 [WARN] IP:2250 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2025-05-13 09:51:51,504 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp_save
+2025-05-13 09:51:51,764 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\license.tmp
+2025-05-13 09:51:51,863 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp_save
+2025-05-13 09:51:52,033 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\gpio.tmp
+2025-05-13 09:51:52,114 [WARN] IPConfigManager:3217 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-05-13 09:51:52,123 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp_save
+2025-05-13 09:51:52,223 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_vars.tmp
+2025-05-13 09:51:52,227 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp_save
+2025-05-13 09:51:52,315 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_inc.tmp
+2025-05-13 09:51:52,319 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp_save
+2025-05-13 09:51:52,430 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_HalInit.tmp
+2025-05-13 09:51:52,435 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp_save
+2025-05-13 09:51:52,554 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\usb_otg_fs_Msp.tmp
+2025-05-13 09:51:53,085 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c_save
+2025-05-13 09:51:53,197 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.c
+2025-05-13 09:51:53,204 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h_save
+2025-05-13 09:51:53,297 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\App\usb_host.h
+2025-05-13 09:51:53,304 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h_save
+2025-05-13 09:51:53,393 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.h
+2025-05-13 09:51:53,400 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c_save
+2025-05-13 09:51:53,493 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_conf.c
+2025-05-13 09:51:53,504 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c_save
+2025-05-13 09:51:53,594 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.c
+2025-05-13 09:51:53,602 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h_save
+2025-05-13 09:51:53,695 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\USB_HOST\Target\usbh_platform.h
+2025-05-13 09:51:53,801 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c_save
+2025-05-13 09:51:53,883 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_it.c
+2025-05-13 09:51:53,889 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h_save
+2025-05-13 09:51:53,965 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_it.h
+2025-05-13 09:51:53,987 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c_save
+2025-05-13 09:51:54,124 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\stm32f4xx_hal_msp.c
+2025-05-13 09:51:54,131 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp_save
+2025-05-13 09:51:54,189 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\MXTmpFiles\system.tmp
+2025-05-13 09:51:54,200 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h_save
+2025-05-13 09:51:54,270 [INFO] CodeEngine:343 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\stm32f4xx_hal_conf.h
+2025-05-13 09:51:54,309 [INFO] ApiDbMcu:508 - Load IP Config File for TIM4
+2025-05-13 09:51:54,313 [WARN] IPConfigManager:3790 - IP not found : TIM
+2025-05-13 09:51:54,314 [WARN] CodeGenerator:4198 - IP not found : null
+2025-05-13 09:51:54,324 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h_save
+2025-05-13 09:51:54,394 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Inc\main.h
+2025-05-13 09:51:54,401 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c_save
+2025-05-13 09:51:54,544 [INFO] CodeEngine:287 - Generated code: C:\Users\santiago\Documents\Tesis\Codes\DIsc_blink\Core\Src\main.c
+2025-05-13 09:51:55,197 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 250mS.
+2025-05-13 09:51:55,205 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-05-13 09:51:55,285 [INFO] ConfigFileManager:1590 - The Die is : DIE413
+2025-05-13 09:51:56,865 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1661mS.
+2025-05-13 09:51:56,867 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 2mS.
+2025-05-13 09:51:56,875 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-13 10:49:53,861 [INFO] WebApp:194 - Connection lost
+2025-05-13 10:49:54,457 [INFO] WebApp:191 - Connection restablished
+2025-05-13 11:01:46,838 [INFO] WebApp:194 - Connection lost
+2025-05-13 11:01:47,231 [INFO] WebApp:191 - Connection restablished
+2025-05-13 14:05:07,836 [INFO] WebApp:194 - Connection lost
+2025-05-13 14:05:08,254 [INFO] WebApp:191 - Connection restablished
+2025-05-13 14:05:17,324 [INFO] WebApp:194 - Connection lost
+2025-05-13 14:05:17,833 [INFO] WebApp:191 - Connection restablished
+2025-05-13 14:07:44,849 [INFO] WebApp:194 - Connection lost
+2025-05-13 14:07:45,235 [INFO] WebApp:191 - Connection restablished
+2025-05-13 14:37:19,337 [INFO] WebApp:194 - Connection lost
+2025-05-13 14:37:19,701 [INFO] WebApp:191 - Connection restablished
+2025-05-13 14:41:27,856 [INFO] WebApp:194 - Connection lost
+2025-05-13 14:41:28,268 [INFO] WebApp:191 - Connection restablished
+2025-05-13 17:02:32,714 [INFO] WebApp:194 - Connection lost
+2025-05-13 17:02:38,131 [INFO] WebApp:191 - Connection restablished
+2025-05-13 17:02:44,416 [INFO] WebApp:194 - Connection lost
+2025-05-13 17:02:44,894 [INFO] WebApp:191 - Connection restablished

@@ -1,0 +1,126 @@
+(footprint "EIA-Braille"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "09c8acde-9132-4324-a45e-13c9e5fa5e6a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "EIA-Braille"
+		(at 0 3.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "15fb16fd-25fe-41cc-b273-6859e1535af3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "EIA-Braille"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "19d7312b-9b5e-4e9b-b596-4e414bc09bc4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "03ab5a81-fe81-4431-a433-e09696694fde")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "268959ba-19ec-4e57-88e5-bdc6c39c8294")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_circle
+		(center -1.6 -0.6)
+		(end -1.4 -0.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "16edb451-3116-4199-bbcf-65507cecee45")
+	)
+	(fp_circle
+		(center -1 0)
+		(end -0.8 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "8a38e974-175f-40cb-be95-7e32ebe133d2")
+	)
+	(fp_circle
+		(center -0.2 0)
+		(end 0 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "5e083b31-dabe-4203-b36e-50fcf3f22c2f")
+	)
+	(fp_circle
+		(center 0.4 -0.6)
+		(end 0.6 -0.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "92b54705-4fab-449b-8f9a-6accd9c8a641")
+	)
+	(fp_circle
+		(center 1.8 -0.6)
+		(end 2 -0.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "2215d297-e5b3-4c6e-ab2d-a2cf010526a4")
+	)
+)

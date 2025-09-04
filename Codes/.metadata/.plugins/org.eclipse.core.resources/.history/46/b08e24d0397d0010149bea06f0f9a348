@@ -1,0 +1,160 @@
+/*
+ * braille_driver.c
+ *
+ *  Created on: Jul 26, 2025
+ *      Author: santiago
+ */
+#include "main.h"
+#include "braille_driver.h"
+
+// Alphabet Look up table
+static const uint8_t braille_alphabet[26] = {
+	0b100000, // A
+	0b101000, // B
+	0b110000, // C
+	0b110100, // D
+	0b100100, // E
+	0b111000, // F
+	0b111100, // G
+	0b101100, // H
+	0b011000, // I
+	0b011100, // J
+	0b100010, // K
+	0b101010, // L
+	0b110010, // M
+	0b110110, // N
+	0b100110, // O
+	0b111010, // P
+	0b111110, // Q
+	0b101110, // R
+	0b011010, // S
+	0b011110, // T
+	0b100011, // U
+	0b101011, // V
+	0b011101, // W
+	0b110011, // X
+	0b110111, // Y
+	0b100111  // Z
+};
+
+// Referencia a timer para control de tiempo
+static TIM_HandleTypeDef* braille_timer = NULL;
+static int8_t current_step = -1;
+static uint8_t active_pattern = 0;
+static uint32_t activation_time = 0;
+static uint8_t busy = 0;
+
+typedef struct {
+    GPIO_TypeDef* port_1;
+    uint16_t pin_1;
+    GPIO_TypeDef* port_2;
+    uint16_t pin_2;
+} BraillePinPair;
+
+
+// Arreglo con cada punto Braille (A–F)
+static const BraillePinPair braille_pins[BRAILLE_DOT_COUNT] = {
+    {A1_GPIO_Port, A1_Pin, A2_GPIO_Port, A2_Pin}, // A
+    {B1_GPIO_Port, B1_Pin, B2_GPIO_Port, B2_Pin}, // B
+    {C1_GPIO_Port, C1_Pin, C2_GPIO_Port, C2_Pin}, // C
+    {D1_GPIO_Port, D1_Pin, D2_GPIO_Port, D2_Pin}, // D
+    {E1_GPIO_Port, E1_Pin, E2_GPIO_Port, E2_Pin}, // E
+    {F1_GPIO_Port, F1_Pin, F2_GPIO_Port, F2_Pin}  // F
+};
+
+
+// GPIO debugging
+typedef struct {
+	volatile uint8_t pin_1_state;
+	volatile uint8_t pin_2_state;
+}GPIODebugState;
+
+// debug array
+GPIODebugState gpio_db_array[BRAILLE_DOT_COUNT] = {0};
+
+void Braille_DebugUpdateAllPins(void) {
+    gpio_db_array[BRAILLE_A].pin_1_state = (HAL_GPIO_ReadPin(A1_GPIO_Port, A1_Pin) == GPIO_PIN_SET);
+    gpio_db_array[BRAILLE_A].pin_2_state = (HAL_GPIO_ReadPin(A2_GPIO_Port, A2_Pin) == GPIO_PIN_SET);
+
+    gpio_db_array[BRAILLE_B].pin_1_state = (HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_SET);
+    gpio_db_array[BRAILLE_B].pin_2_state = (HAL_GPIO_ReadPin(B2_GPIO_Port, B2_Pin) == GPIO_PIN_SET);
+
+    gpio_db_array[BRAILLE_C].pin_1_state = (HAL_GPIO_ReadPin(C1_GPIO_Port, C1_Pin) == GPIO_PIN_SET);
+    gpio_db_array[BRAILLE_C].pin_2_state = (HAL_GPIO_ReadPin(C2_GPIO_Port, C2_Pin) == GPIO_PIN_SET);
+
+    gpio_db_array[BRAILLE_D].pin_1_state = (HAL_GPIO_ReadPin(D1_GPIO_Port, D1_Pin) == GPIO_PIN_SET);
+    gpio_db_array[BRAILLE_D].pin_2_state = (HAL_GPIO_ReadPin(D2_GPIO_Port, D2_Pin) == GPIO_PIN_SET);
+
+    gpio_db_array[BRAILLE_E].pin_1_state = (HAL_GPIO_ReadPin(E1_GPIO_Port, E1_Pin) == GPIO_PIN_SET);
+    gpio_db_array[BRAILLE_E].pin_2_state = (HAL_GPIO_ReadPin(E2_GPIO_Port, E2_Pin) == GPIO_PIN_SET);
+
+    gpio_db_array[BRAILLE_F].pin_1_state = (HAL_GPIO_ReadPin(F1_GPIO_Port, F1_Pin) == GPIO_PIN_SET);
+    gpio_db_array[BRAILLE_F].pin_2_state = (HAL_GPIO_ReadPin(F2_GPIO_Port, F2_Pin) == GPIO_PIN_SET);
+}
+
+
+
+// Poner punto en reposo
+static void Braille_IdleDot(BrailleDot_t dot) {
+    HAL_GPIO_WritePin(braille_pins[dot].port_1, braille_pins[dot].pin_1, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(braille_pins[dot].port_2, braille_pins[dot].pin_2, GPIO_PIN_RESET);
+}
+
+// Subir o bajar un punto (1: subir, 0: bajar)
+static void Braille_MoveDot(BrailleDot_t dot, uint8_t up) {
+    HAL_GPIO_WritePin(braille_pins[dot].port_1, braille_pins[dot].pin_1, up ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(braille_pins[dot].port_2, braille_pins[dot].pin_2, up ? GPIO_PIN_RESET : GPIO_PIN_SET);
+}
+
+static uint8_t Braille_GetCharPattern(char c){
+	if(c>='A' && c<='Z'){
+		return braille_alphabet[c - 'A'];
+	}
+	return 0x00;
+}
+
+
+
+void Braille_Init(TIM_HandleTypeDef* htim) {
+    braille_timer = htim;
+    for (int i = 0; i < BRAILLE_DOT_COUNT; i++) {
+        Braille_IdleDot((BrailleDot_t)i);
+    }
+}
+
+void Braille_Display(char letter) {
+    if (busy) return;
+    active_pattern = Braille_GetCharPattern(letter);
+    current_step = 0;
+    busy = 1;
+    activation_time = 0;
+}
+
+void Braille_Update(void) {
+    if (!busy || current_step == -1) return;
+
+    uint32_t now = __HAL_TIM_GET_COUNTER(braille_timer);
+
+    if (activation_time == 0) {
+        Braille_IdleDot((BrailleDot_t)current_step); // Siempre iniciar limpio
+
+        uint8_t bit = (active_pattern >> (5 - current_step)) & 0x01;
+        Braille_MoveDot((BrailleDot_t)current_step, bit);
+
+        activation_time = now;
+        return;
+    }
+
+    uint32_t elapsed = (now >= activation_time) ? now - activation_time : (0xFFFF - activation_time + now);
+
+    if (elapsed >= BRAILLE_ACTIVE_TIME_MS) {
+        Braille_IdleDot((BrailleDot_t)current_step);
+        activation_time = 0;
+        current_step++;
+
+        if (current_step >= BRAILLE_DOT_COUNT) {
+            current_step = 0;
+            busy = 0;
+        }
+    }
+}

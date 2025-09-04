@@ -1,0 +1,10 @@
+09:52:40 **** Incremental Build of configuration Debug for project DIsc_blink ****
+make -j12 all 
+arm-none-eabi-size  DIsc_blink.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40684	    124	   4348	  45156	   b064	DIsc_blink.elf
+Finished building: default.size.stdout
+ 
+
+09:52:40 Build Finished. 0 errors, 0 warnings. (took 316ms)
+

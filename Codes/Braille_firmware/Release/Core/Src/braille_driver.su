@@ -1,0 +1,4 @@
+../Core/Src/braille_driver.c:65:13:Braille_IdleDot	8	static
+../Core/Src/braille_driver.c:84:6:Braille_Init	8	static
+../Core/Src/braille_driver.c:91:6:Braille_Display	0	static
+../Core/Src/braille_driver.c:99:6:Braille_Update	32	static

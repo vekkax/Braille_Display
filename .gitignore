@@ -1,0 +1,4 @@
+# Ignore specific subdirectories in Codes/beep_AGV
+Codes/beep_AGV/Disc_blink/
+Codes/beep_AGV/UART_test/
+

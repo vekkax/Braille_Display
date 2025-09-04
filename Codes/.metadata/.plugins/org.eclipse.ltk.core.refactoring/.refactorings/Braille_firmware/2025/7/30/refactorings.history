@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Braille_firmware/Core/Inc/electromagnet_driver.h&apos; to &apos;braille_driver.h&apos;" description="Rename resource &apos;electromagnet_driver.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/electromagnet_driver.h" name="braille_driver.h" stamp="1753561910223" updateReferences="true"/>
+</session>

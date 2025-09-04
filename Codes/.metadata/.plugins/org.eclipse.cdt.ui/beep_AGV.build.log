@@ -1,0 +1,10 @@
+12:31:25 **** Incremental Build of configuration Debug for project beep_AGV ****
+make -j12 all 
+arm-none-eabi-size  beep_AGV.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5896	     12	   1572	   7480	   1d38	beep_AGV.elf
+Finished building: default.size.stdout
+ 
+
+12:31:26 Build Finished. 0 errors, 0 warnings. (took 217ms)
+

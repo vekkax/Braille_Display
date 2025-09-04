@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model AP7583AQ-33MP-13
+#/17638332/1665568/2.50/9/2/Integrated Circuit
+DEF AP7583AQ-33MP-13 IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "AP7583AQ-33MP-13" 1050 200 50 H V L CNN
+F2 "SOP65P490X110-9N" 1050 100 50 H I L CNN
+F3 "https://www.diodes.com/assets/Datasheets/AP7583Q_AQ.pdf" 1050 0 50 H I L CNN
+F4 "Linear Voltage Regulator IC Positive Fixed 1 Output 300mA 8-MSOP-EP" 1050 -100 50 H I L CNN "Description"
+F5 "1.1" 1050 -200 50 H I L CNN "Height"
+F6 "621-AP7583AQ-33MP-13" 1050 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AP7583AQ-33MP-13?qs=rQFj71Wb1eXNp2QClIMzDQ%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Diodes Incorporated" 1050 -500 50 H I L CNN "Manufacturer_Name"
+F9 "AP7583AQ-33MP-13" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X VIN 1 0 0 200 R 50 50 0 0 P
+X EN 2 0 -100 200 R 50 50 0 0 P
+X NC 3 0 -200 200 R 50 50 0 0 N
+X GND_1 4 0 -300 200 R 50 50 0 0 P
+X GND_3 9 600 -1000 200 U 50 50 0 0 P
+X VOUT 8 1200 0 200 L 50 50 0 0 P
+X PG 7 1200 -100 200 L 50 50 0 0 P
+X FB/NC 6 1200 -200 200 L 50 50 0 0 P
+X GND_2 5 1200 -300 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -800 200 -800 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

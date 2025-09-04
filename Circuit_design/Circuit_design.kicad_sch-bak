@@ -1,0 +1,157 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 504fb267-b15c-4d0a-9f0b-5aa703044f0f)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 24.13 26.67) (size 50.8 62.23) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 61ee4e0a-2955-42f2-843f-0d65d6724514)
+    (property "Sheet name" "Power_suply" (id 0) (at 24.13 25.9584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "Power_suply.kicad_sch" (id 1) (at 24.13 89.4846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 187.96 57.15) (size 46.99 46.99) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid fcaa1cb0-b168-4e6a-ac1d-510203a9bc63)
+    (property "Sheet name" "Electromagnet_drive" (id 0) (at 187.96 56.4384 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "Electromagnet_drive.kicad_sch" (id 1) (at 187.96 104.7246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63" (page "2"))
+    (path "/61ee4e0a-2955-42f2-843f-0d65d6724514" (page "3"))
+  )
+
+  (symbol_instances
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/0938fdc2-93d9-4bcf-a2f5-98588a9f9440"
+      (reference "#PWR01") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/ff5f554d-e0bf-45b8-9538-8ffc9e484bd3"
+      (reference "#PWR02") (unit 1) (value "+7.5V") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/ddf10dfd-f895-4b57-86b4-46ccae81814b"
+      (reference "#PWR03") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/7861f45c-f9db-40fa-92d7-0a6a68e07d05"
+      (reference "#PWR04") (unit 1) (value "+7.5V") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/7e8ccafc-8513-4806-a82e-d92250eab998"
+      (reference "#PWR05") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/e7824913-9f2a-4fa9-b820-30e928d5440d"
+      (reference "#PWR06") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/c9b47019-f46a-41d6-97d1-2116567639fb"
+      (reference "#PWR07") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/a2ef9278-bbb0-44fc-b76c-1a0313353a10"
+      (reference "#PWR08") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/60c36f58-25a0-4080-a028-f0768d976864"
+      (reference "#PWR09") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/407830c4-8a75-48fb-90ff-fd3bf6b8c9bd"
+      (reference "#PWR010") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/2dbfc895-a454-43b9-92ba-909667a03a83"
+      (reference "#PWR011") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/3b7f5c0d-84d0-4488-be04-476c0ac66147"
+      (reference "#PWR012") (unit 1) (value "+7.5V") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/70677194-2ec2-4d5f-80dd-dcf5031e0631"
+      (reference "#PWR013") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/ed6612b5-170f-4a2c-b7ff-f6f599eec642"
+      (reference "#PWR014") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/8bdf7528-66ef-4a2b-8159-1d8de2304267"
+      (reference "#PWR015") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/61ee4e0a-2955-42f2-843f-0d65d6724514/ff3feb26-af59-47f9-9815-6c1545202d37"
+      (reference "#PWR016") (unit 1) (value "+7.5V") (footprint "")
+    )
+    (path "/61ee4e0a-2955-42f2-843f-0d65d6724514/fb7bcd2b-3f8a-42eb-87c1-51322372f06f"
+      (reference "#PWR017") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/0939e5b2-0043-426b-8a32-b4d497d45cfd"
+      (reference "C1") (unit 1) (value "10uF") (footprint "Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S_Pad1.58x1.35mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/d29ec401-3912-43a5-a3d9-7dd4c9d6c2b6"
+      (reference "C2") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_1812_4532Metric_Pad1.57x3.40mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/f24553c1-4743-4264-8de2-5e7d371181ca"
+      (reference "C3") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_1812_4532Metric_Pad1.57x3.40mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/f5d4b184-826b-435a-ba45-77362e37c44c"
+      (reference "C4") (unit 1) (value "10uF") (footprint "Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S_Pad1.58x1.35mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/28c2df16-05a5-4887-bff9-1e7cbd8da4cd"
+      (reference "C5") (unit 1) (value "10uF") (footprint "Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S_Pad1.58x1.35mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/db605627-f725-42e7-b3b4-eb43400bdecc"
+      (reference "C6") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_1812_4532Metric_Pad1.57x3.40mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/60aede93-f14e-4e6a-a347-6286b6a4b62d"
+      (reference "C7") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_1812_4532Metric_Pad1.57x3.40mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/7fbf49ab-d7e7-4c2c-ae65-a4018268b3cf"
+      (reference "C8") (unit 1) (value "10uF") (footprint "Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S_Pad1.58x1.35mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/a37f1089-08fa-4196-8f25-32ceac9cc664"
+      (reference "C9") (unit 1) (value "10uF") (footprint "Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S_Pad1.58x1.35mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/a6db989c-b2ae-4c9a-aeec-0105dd115993"
+      (reference "C10") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_1812_4532Metric_Pad1.57x3.40mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/dc54895f-2141-49bd-9377-9ee428c210d0"
+      (reference "C11") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_1812_4532Metric_Pad1.57x3.40mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/2834ebec-a563-4a6c-aa5a-d9c4bfdc4004"
+      (reference "C12") (unit 1) (value "10uF") (footprint "Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S_Pad1.58x1.35mm_HandSolder")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/d10dc2d2-63f6-4ae6-ae57-4c580ea19e85"
+      (reference "U1") (unit 1) (value "Electromagnets") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/b65c0749-e65e-4aac-8b56-b63c44dd9028"
+      (reference "U1") (unit 2) (value "Electromagnets") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/94072152-b14e-4010-b11e-de932bfd0cdd"
+      (reference "U1") (unit 3) (value "Electromagnets") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/96abe31f-83fb-45a7-90e9-b5e772e64b43"
+      (reference "U1") (unit 4) (value "Electromagnets") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/3cc11fb6-a352-493b-abcb-2d449e5267c2"
+      (reference "U1") (unit 5) (value "Electromagnets") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/d3ecf5f1-cf66-4219-9eaa-09bfd7bd920f"
+      (reference "U1") (unit 6) (value "Electromagnets") (footprint "")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/8cc5e847-9490-4bd1-b995-6d204ee17431"
+      (reference "U2") (unit 1) (value "TB6612FNG") (footprint "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/75fb8f37-aae1-47d0-9a54-eb7d4b6b9a3e"
+      (reference "U3") (unit 1) (value "TB6612FNG") (footprint "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm")
+    )
+    (path "/fcaa1cb0-b168-4e6a-ac1d-510203a9bc63/2815c71a-f1e0-48a8-9ee4-5b02f1f291f5"
+      (reference "U4") (unit 1) (value "TB6612FNG") (footprint "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm")
+    )
+  )
+)

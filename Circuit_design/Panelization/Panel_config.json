@@ -1,0 +1,24 @@
+{
+    "layout": {
+        "hspace": "2mm",
+        "vspace": "2mm",
+        "rows": "2",
+        "cols": "2"
+    },
+    "tabs": {
+        "type": "fixed",
+        "vcount": "2",
+        "hcount": "2"
+    },
+    "cuts": {
+        "type": "mousebites",
+        "offset": "0.25mm"
+    },
+    "framing": {
+        "type": "frame",
+        "width": "8mm"
+    },
+    "post": {
+        "origin": "bl"
+    }
+}
