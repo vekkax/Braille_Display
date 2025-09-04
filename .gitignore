@@ -2,3 +2,9 @@
 Codes/beep_AGV/Disc_blink/
 Codes/beep_AGV/UART_test/
 
+# Ignore everything in 3d_models
+3d_models/*
+
+# Except Print_files directory and its contents
+!3d_models/Print_files/
+!3d_models/Print_files/**
