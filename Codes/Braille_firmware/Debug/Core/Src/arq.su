@@ -1,0 +1,9 @@
+../Core/Src/arq.c:11:10:Build_Data	48	static
+../Core/Src/arq.c:30:10:Build_ACK	32	static
+../Core/Src/arq.c:44:10:Build_NAK	32	static
+../Core/Src/arq.c:60:6:Handle_Frame	80	static
+../Core/Src/arq.c:119:6:ARQ_Init	8	static
+../Core/Src/arq.c:125:6:ARQ_Tick	8	static
+../Core/Src/arq.c:153:6:ARQ_SendReliable	40	static
+../Core/Src/arq.c:171:6:ARQ_OnAckReceived	16	static
+../Core/Src/arq.c:179:6:ARQ_OnNakReceived	16	static

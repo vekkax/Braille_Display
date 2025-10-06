@@ -22,7 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "braille_driver.h"
-#include "comms.h"
+#include "frame.h"
+#include "logic.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -108,8 +109,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
   HAL_TIM_Base_Start(&htim3);
+
+
   Braille_Init (&htim3);
-  Comms_Init(&huart2, &huart1,&htim3);
+  Logic_Init(&huart2, &huart1, &htim3);
 
   /* USER CODE END 2 */
 
@@ -121,7 +124,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	Braille_DebugUpdateAllPins();
-	Comms_Process();
+	Logic_Process();
 	Braille_Update();
 
 
@@ -486,7 +489,7 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-    Comms_OnUARTReceive(huart);
+    Logic_OnUARTReceive(huart);
 }
 /* USER CODE END 4 */
 

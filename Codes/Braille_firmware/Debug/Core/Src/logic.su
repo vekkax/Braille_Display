@@ -1,0 +1,7 @@
+../Core/Src/logic.c:40:20:ParseCommand	16	static
+../Core/Src/logic.c:51:6:StartBuzzer	16	static
+../Core/Src/logic.c:58:6:UpdateBuzzer	24	static
+../Core/Src/logic.c:92:6:Logic_Init	24	static
+../Core/Src/logic.c:105:6:Logic_OnUARTReceive	16	static
+../Core/Src/logic.c:119:6:Logic_Process	112	static
+../Core/Src/logic.c:308:6:Logic_TriggerReset	8	static

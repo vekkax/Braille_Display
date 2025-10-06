@@ -1,0 +1,65 @@
+/*
+ * logic.h
+ *
+ *  Created on: Sep 17, 2025
+ *      Author: santiago
+ */
+
+#ifndef INC_LOGIC_H_
+#define INC_LOGIC_H_
+
+#include "stm32c0xx_hal.h"
+#include "frame.h"
+#include <stdint.h>
+#include <stdbool.h>
+#include "string.h"
+#include "stdlib.h"
+#include "main.h"
+#include "braille_driver.h"
+#include <stdio.h>
+
+
+#define READY_BEEP_TIME 200
+#define SUCCES_BEEP_TIME 500
+
+typedef enum {
+	STATE_WAIT_ASSIGNMENT,
+	STATE_READY,
+	STATE_GAME,
+	STATE_VERIFY,
+	STATE_SUCCESS,
+	STATE_SHUTDOWN
+}GameState;
+
+
+typedef enum {
+    CMD_UNKNOWN = 0,
+    CMD_CHAR,
+    CMD_WORD,
+    CMD_START,
+    CMD_RESET,
+    CMD_FIRST,
+    CMD_ANCHOR
+} CommandType;
+
+typedef enum{
+	BEEP_NONE,
+	BEEP_READY,
+	BEEP_SUCCESS,
+}BuzzerState;
+
+extern volatile GameState logic_state;
+extern volatile char my_letter;
+extern char original_word[MAX_WORD_LENGTH + 1];
+
+void Logic_Init(UART_HandleTypeDef* huart_left, UART_HandleTypeDef* huart_right, TIM_HandleTypeDef* buzzer_tim);
+void Logic_Process(void);
+void Logic_TriggerReset(void);
+void Logic_OnUARTReceive(UART_HandleTypeDef* huart);
+
+void logic_ProcessFrame(uint8_t* temp_buffer, uint16_t len);
+
+void Logic_ProcessUserData( uint8_t* user, uint16_t u_len);
+
+
+#endif /* INC_LOGIC_H_ */

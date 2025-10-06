@@ -5,8 +5,10 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/arq.c \
 ../Core/Src/braille_driver.c \
-../Core/Src/comms.c \
+../Core/Src/frame.c \
+../Core/Src/logic.c \
 ../Core/Src/main.c \
 ../Core/Src/stm32c0xx_hal_msp.c \
 ../Core/Src/stm32c0xx_it.c \
@@ -15,8 +17,10 @@ C_SRCS += \
 ../Core/Src/system_stm32c0xx.c 
 
 OBJS += \
+./Core/Src/arq.o \
 ./Core/Src/braille_driver.o \
-./Core/Src/comms.o \
+./Core/Src/frame.o \
+./Core/Src/logic.o \
 ./Core/Src/main.o \
 ./Core/Src/stm32c0xx_hal_msp.o \
 ./Core/Src/stm32c0xx_it.o \
@@ -25,8 +29,10 @@ OBJS += \
 ./Core/Src/system_stm32c0xx.o 
 
 C_DEPS += \
+./Core/Src/arq.d \
 ./Core/Src/braille_driver.d \
-./Core/Src/comms.d \
+./Core/Src/frame.d \
+./Core/Src/logic.d \
 ./Core/Src/main.d \
 ./Core/Src/stm32c0xx_hal_msp.d \
 ./Core/Src/stm32c0xx_it.d \
@@ -42,7 +48,7 @@ Core/Src/%.o Core/Src/%.su Core/Src/%.cyclo: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/braille_driver.cyclo ./Core/Src/braille_driver.d ./Core/Src/braille_driver.o ./Core/Src/braille_driver.su ./Core/Src/comms.cyclo ./Core/Src/comms.d ./Core/Src/comms.o ./Core/Src/comms.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32c0xx_hal_msp.cyclo ./Core/Src/stm32c0xx_hal_msp.d ./Core/Src/stm32c0xx_hal_msp.o ./Core/Src/stm32c0xx_hal_msp.su ./Core/Src/stm32c0xx_it.cyclo ./Core/Src/stm32c0xx_it.d ./Core/Src/stm32c0xx_it.o ./Core/Src/stm32c0xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32c0xx.cyclo ./Core/Src/system_stm32c0xx.d ./Core/Src/system_stm32c0xx.o ./Core/Src/system_stm32c0xx.su
+	-$(RM) ./Core/Src/arq.cyclo ./Core/Src/arq.d ./Core/Src/arq.o ./Core/Src/arq.su ./Core/Src/braille_driver.cyclo ./Core/Src/braille_driver.d ./Core/Src/braille_driver.o ./Core/Src/braille_driver.su ./Core/Src/frame.cyclo ./Core/Src/frame.d ./Core/Src/frame.o ./Core/Src/frame.su ./Core/Src/logic.cyclo ./Core/Src/logic.d ./Core/Src/logic.o ./Core/Src/logic.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32c0xx_hal_msp.cyclo ./Core/Src/stm32c0xx_hal_msp.d ./Core/Src/stm32c0xx_hal_msp.o ./Core/Src/stm32c0xx_hal_msp.su ./Core/Src/stm32c0xx_it.cyclo ./Core/Src/stm32c0xx_it.d ./Core/Src/stm32c0xx_it.o ./Core/Src/stm32c0xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32c0xx.cyclo ./Core/Src/system_stm32c0xx.d ./Core/Src/system_stm32c0xx.o ./Core/Src/system_stm32c0xx.su
 
 .PHONY: clean-Core-2f-Src
 

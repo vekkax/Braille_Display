@@ -1,0 +1,194 @@
+/*
+ * arq.c
+ *
+ *  Created on: Sep 27, 2025
+ *      Author: santiago
+ */
+
+#include "arq.h"
+
+
+uint16_t Build_Data(uint8_t src, uint8_t dst, uint8_t seq, bool req_ack , const uint8_t* user, uint16_t user_len, uint8_t* frame_out, uint16_t cap){
+	if(user_len > (MAX_PAYLOAD - sizeof(RHdr))) return 0;
+
+	RHdr h ={
+			.msg_type=T_DATA,
+			.src=src,
+			.dst=dst,
+			.seq=seq,
+			.flags = (req_ack ? FLAG_REQ_ACK: 0)
+	};
+
+	uint8_t payload[MAX_PAYLOAD];
+	memcpy(payload, &h, sizeof(h));
+	memcpy(payload + sizeof(h), user, user_len);
+
+	return UART_BuildFrame(payload, (uint16_t)(sizeof(h) + user_len), frame_out, cap);
+}
+
+
+uint16_t Build_ACK(uint8_t src, uint8_t dst, uint8_t seq, uint8_t* frame_out, uint16_t cap){
+
+	RHdr h = {
+			.msg_type=T_ACK,
+			.src=src,
+			.dst=dst,
+			.seq=seq,
+			.flags=0
+	};
+
+	return UART_BuildFrame((uint8_t*)&h, sizeof(h), frame_out, cap);
+}
+
+
+uint16_t Build_NAK(uint8_t src, uint8_t dst, uint8_t seq, uint8_t* frame_out, uint16_t cap)
+{
+    RHdr h = {
+    		.msg_type=T_NAK,
+			.src=src,
+			.dst=dst,
+			.seq=seq,
+			.flags=0
+    };
+
+    return UART_BuildFrame((uint8_t*)&h, sizeof(h), frame_out, cap);
+}
+
+
+// Handle a validated frame (already passed CRC/END).
+// Replies (ACK/NAK/PONG) go out through `huart_tx`.
+bool Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t len, uint8_t my_id, uint8_t* txbuf, uint16_t txcap){
+
+	if (len < sizeof(RHdr)) return false;
+
+    const RHdr* h = (const RHdr*)payload;
+    if (h->dst != my_id && h->dst != 0xFF /* broadcast */) return false;
+
+    switch (h->msg_type)
+    {
+    case T_DATA: {
+        const uint8_t* user = payload + sizeof(RHdr);
+        const uint16_t ulen = (uint16_t)(len - sizeof(RHdr));
+
+        static uint8_t expected_seq = 0;
+
+        if (h->seq == expected_seq) {
+            // deliver to your app
+            Logic_ProcessUserData((uint8_t*)user, (uint16_t)ulen);
+
+            if (h->flags & FLAG_REQ_ACK) {
+                uint16_t n = Build_ACK(my_id, h->src, h->seq, txbuf, txcap);
+                if (n) Comms_SendFrame(huart_tx, txbuf, n, 100);
+            }
+            expected_seq++;
+        } else {
+            // duplicate/out-of-order: re-ACK last good
+            if (h->flags & FLAG_REQ_ACK) {
+                uint8_t last_ok = (uint8_t)(expected_seq - 1);
+                uint16_t n = Build_ACK(my_id, h->src, last_ok, txbuf, txcap);
+                if (n) Comms_SendFrame(huart_tx, txbuf, n, 100);
+            }
+        }
+        return true;
+    }
+
+    case T_ACK:
+        ARQ_OnAckReceived(h->seq);   // your sender FSM callback
+        return true;
+
+    case T_NAK:
+        ARQ_OnNakReceived(h->seq);   // your sender FSM callback
+        return true;
+
+    case T_PING: {
+        // Either echo whole payload or craft a PONG:
+        RHdr pong = { .msg_type=T_PONG, .src=my_id, .dst=h->src, .seq=h->seq, .flags=0 };
+        uint16_t n = UART_BuildFrame((uint8_t*)&pong, sizeof(pong), txbuf, txcap);
+        if (n) Comms_SendFrame(huart_tx, txbuf, n, 100);
+        return true;
+    }
+
+    case T_PONG:
+        ARQ_OnPong(h->seq);
+        return true;
+    }
+
+    return false;
+}
+
+void ARQ_Init(void){
+    memset(&arq, 0, sizeof(arq));
+    arq.st = S_IDLE;
+    arq.next_seq = 0;
+}
+
+void ARQ_Tick(void){
+    switch (arq.st) {
+    case S_IDLE: return;
+
+    case S_WAIT_ACK:
+        if (TimePassed(NowMs(), arq.t_expire_ms)) {
+            if (arq.retries_left == 0) {
+                // report failure:
+                Logic_OnSendFailed(arq.pending_seq);
+                arq.st = S_IDLE;
+            } else {
+                arq.retries_left--;
+                // mark as retransmission
+                ((RHdr*)(arq.frame + 1 + 1 + 2))->flags |= FLAG_IS_RETX;
+                Comms_SendRaw(arq.frame, arq.frame_len);
+                arq.t_expire_ms = NowMs() + ACK_TIMEOUT_MS;
+                arq.st = S_RETX;
+            }
+        }
+        return;
+
+    case S_RETX:
+        // Immediately go back to waiting for ACK
+        arq.st = S_WAIT_ACK;
+        return;
+    }
+}
+
+bool ARQ_SendReliable(uint8_t src, uint8_t dst,
+                      const uint8_t* user, uint16_t ulen)
+{
+    if (arq.st != S_IDLE) return false; // one outstanding at a time
+
+    arq.pending_seq = arq.next_seq;
+
+    arq.frame_len = Build_DATA(src, dst, arq.pending_seq, true, user, ulen,
+                               arq.frame, sizeof(arq.frame));
+    if (!arq.frame_len) return false;
+
+    Comms_SendRaw(arq.frame, arq.frame_len);
+
+    arq.retries_left = 3;
+    arq.t_expire_ms  = NowMs() + ACK_TIMEOUT_MS;
+    arq.st = S_WAIT_ACK;
+    return true;
+}
+
+void ARQ_OnAckReceived(uint8_t seq){
+    if (arq.st == S_WAIT_ACK && seq == arq.pending_seq) {
+        Logic_OnSendOk(seq);
+        arq.next_seq++;
+        arq.st = S_IDLE;
+    }
+}
+
+void ARQ_OnNakReceived(uint8_t seq){
+    if (arq.st != S_IDLE && seq == arq.pending_seq) {
+        if (arq.retries_left) {
+            arq.retries_left--;
+            ((RHdr*)(arq.frame + 1 + 1 + 2))->flags |= FLAG_IS_RETX;
+            Comms_SendRaw(arq.frame, arq.frame_len);
+            arq.t_expire_ms = NowMs() + ACK_TIMEOUT_MS;
+            arq.st = S_WAIT_ACK;
+        } else {
+            Logic_OnSendFailed(seq);
+            arq.st = S_IDLE;
+        }
+    }
+}
+

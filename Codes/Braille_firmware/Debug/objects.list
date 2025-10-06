@@ -1,5 +1,7 @@
+"./Core/Src/arq.o"
 "./Core/Src/braille_driver.o"
-"./Core/Src/comms.o"
+"./Core/Src/frame.o"
+"./Core/Src/logic.o"
 "./Core/Src/main.o"
 "./Core/Src/stm32c0xx_hal_msp.o"
 "./Core/Src/stm32c0xx_it.o"

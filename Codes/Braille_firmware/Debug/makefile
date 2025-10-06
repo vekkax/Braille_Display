@@ -60,8 +60,8 @@ all: main-build
 main-build: Braille_firmware.elf secondary-outputs
 
 # Tool invocations
-Braille_firmware.elf Braille_firmware.map: $(OBJS) $(USER_OBJS) C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\STM32C031G6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Braille_firmware.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\santiago\Documents\Tesis\Codes\Braille_firmware\STM32C031G6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Braille_firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Braille_firmware.elf Braille_firmware.map: $(OBJS) $(USER_OBJS) C:\Users\santiago\Documents\Tesis\Braille_Display\Codes\Braille_firmware\STM32C031G6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Braille_firmware.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\santiago\Documents\Tesis\Braille_Display\Codes\Braille_firmware\STM32C031G6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Braille_firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

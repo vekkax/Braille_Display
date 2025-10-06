@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Braille_firmware/Core/Src/comms.c&apos; to &apos;frame.c&apos;" description="Rename resource &apos;comms.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/comms.c" name="frame.c" stamp="1759009599757" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Braille_firmware/Core/Inc/comms.h&apos; to &apos;frame.h&apos;" description="Rename resource &apos;comms.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/comms.h" name="frame.h" stamp="1759009626039" updateReferences="true"/>
+</session>
