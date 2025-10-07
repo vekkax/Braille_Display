@@ -69,7 +69,7 @@ bool CircularBuffer_ReadLine(CircularBuffer* cb, char* out, size_t max_len);
 void CircularBuffer_Push(CircularBuffer* cb, uint8_t c);
 int UART_TryParseFrame(CircularBuffer* cb, uint8_t* out, uint16_t out_size);
 uint16_t UART_BuildFrame(const uint8_t* payload, uint16_t plen, uint8_t* out, uint16_t out_cap);
-bool Comms_SendFrame(UART_HandleTypeDef *huart, const uint8_t *txbuf, uint16_t len, uint32_t timeout);
+void Comms_SendFrame(UART_HandleTypeDef *huart, const uint8_t *txbuf, uint16_t txcap, uint32_t delay);
 
 
 

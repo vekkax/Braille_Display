@@ -22,7 +22,7 @@ static inline void FP_Init(FrameParser* fp, uint8_t* out, uint16_t out_cap) {
     fp->st = START_FRAME;
     fp->len = fp->got = 0;
     fp->rx_crc = fp->crc = 0xFFFF;   // seed matches CCITT-FALSE
-    memset(out, 0, out_cap);
+    memset(out, 0, sizeof(out));
     fp->out = out;
     fp->out_cap = out_cap;
 }

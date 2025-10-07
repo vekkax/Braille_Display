@@ -78,7 +78,7 @@ bool Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t
 				// Duplicate/out-of-order → re-ACK last good
 				if (h->flags & FLAG_REQ_ACK) {
 					uint8_t last_ok = (uint8_t)(expected_seq - 1);
-					uint16_t n = Build_ACK(last_ok, txbuf, txcap);
+					uint16_t n = Build_ACK(my_id, h->src, last_ok, txbuf, txcap);
 					if (n) (void)Comms_SendFrame(huart_tx, txbuf, n, 100);
 				}
 			}
@@ -97,11 +97,7 @@ bool Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t
 
 
 		case T_PING: {
-			RHdr pong = { .msg_type=T_PONG,
-						  .seq=h->seq,
-						  .flags=0
-			};
-
+			RHdr pong = { .msg_type=T_PONG, .seq=h->seq, .flags=0 };
 			uint16_t n = UART_BuildFrame((uint8_t*)&pong, sizeof(pong), txbuf, txcap);
 			if (n) (void)Comms_SendFrame(huart_tx, txbuf, n, 100);
 			return true;
@@ -111,9 +107,8 @@ bool Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t
 			ARQ_OnPong(h->seq);   // optional
 			return true;
 		}
-    }
     return false;
-
+    }
 }
 
 // ---------- ARQ TX side ----------
@@ -130,7 +125,8 @@ bool ARQ_SendReliable(UART_HandleTypeDef* huart, const uint8_t* user, uint16_t u
     arq.huart_tx   = huart;
     arq.pending_seq = arq.next_seq;
 
-    arq.frame_len = Build_Data( arq.pending_seq, true, user, ulen, arq.frame, sizeof(arq.frame));
+    arq.frame_len = Build_Data(src, dst, arq.pending_seq, true,
+                               user, ulen, arq.frame, sizeof(arq.frame));
     if (!arq.frame_len) return false;
 
     if (!Comms_SendFrame(arq.huart_tx, arq.frame, arq.frame_len, 100))

@@ -97,11 +97,7 @@ bool Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t
 
 
 		case T_PING: {
-			RHdr pong = { .msg_type=T_PONG,
-						  .seq=h->seq,
-						  .flags=0
-			};
-
+			RHdr pong = { .msg_type=T_PONG, .seq=h->seq, .flags=0 };
 			uint16_t n = UART_BuildFrame((uint8_t*)&pong, sizeof(pong), txbuf, txcap);
 			if (n) (void)Comms_SendFrame(huart_tx, txbuf, n, 100);
 			return true;

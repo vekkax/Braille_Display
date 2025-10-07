@@ -75,7 +75,9 @@ uint16_t Build_NAK ( uint8_t seq, uint8_t* frame_out, uint16_t cap);
 bool Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t len,uint8_t* txbuf, uint16_t txcap);
 
 // ARQ sender (stop-and-wait)
-bool ARQ_SendReliable(UART_HandleTypeDef* huart, const uint8_t* user, uint16_t ulen);
+bool ARQ_SendReliable(UART_HandleTypeDef* huart,
+                      uint8_t src, uint8_t dst,
+                      const uint8_t* user, uint16_t ulen);
 void ARQ_Tick(void);
 
 // RX callbacks from your logic/parser

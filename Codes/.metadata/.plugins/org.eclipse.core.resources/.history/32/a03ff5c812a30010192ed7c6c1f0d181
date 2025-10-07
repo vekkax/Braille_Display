@@ -13,7 +13,6 @@ static inline uint16_t cb_next(uint16_t x){
 }
 
 void CircularBuffer_Init(CircularBuffer* cb){
-	memset(cb->buffer, 0, sizeof(cb->buffer));
 	cb->head=0;
 	cb->tail=0;
 }
@@ -22,7 +21,6 @@ static inline void FP_Init(FrameParser* fp, uint8_t* out, uint16_t out_cap) {
     fp->st = START_FRAME;
     fp->len = fp->got = 0;
     fp->rx_crc = fp->crc = 0xFFFF;   // seed matches CCITT-FALSE
-    memset(out, 0, out_cap);
     fp->out = out;
     fp->out_cap = out_cap;
 }
@@ -291,9 +289,8 @@ bool CircularBuffer_ReadLine(CircularBuffer* cb, char* out, size_t max_len) {
 }
 
 
-bool Comms_SendFrame(UART_HandleTypeDef *huart, const uint8_t *txbuf, uint16_t len, uint32_t timeout){
-    if (!huart || !txbuf || !len) return false;
-    return (HAL_UART_Transmit(huart, (uint8_t*)txbuf, len, timeout) == HAL_OK);
+void Comms_SendFrame(UART_HandleTypeDef *huart, const uint8_t *txbuf, uint16_t txcap, uint32_t delay){
+	HAL_UART_Transmit(huart, txbuf, txcap, delay);
 }
 
 

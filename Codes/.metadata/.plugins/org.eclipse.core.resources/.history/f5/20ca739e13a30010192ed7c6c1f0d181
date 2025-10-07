@@ -67,15 +67,24 @@ extern ArqTx arq;
 void ARQ_Init(void);
 
 // Build frames that include your on-wire format (SYNC..LEN..PAYLOAD..CRC..END)
-uint16_t Build_Data( uint8_t seq, bool req_ack,const uint8_t* user, uint16_t user_len, uint8_t* frame_out, uint16_t cap);
-uint16_t Build_ACK (uint8_t seq, uint8_t* frame_out, uint16_t cap);
-uint16_t Build_NAK ( uint8_t seq, uint8_t* frame_out, uint16_t cap);
+uint16_t Build_Data(uint8_t src, uint8_t dst, uint8_t seq, bool req_ack,
+                    const uint8_t* user, uint16_t user_len,
+                    uint8_t* frame_out, uint16_t cap);
+uint16_t Build_ACK (uint8_t src, uint8_t dst, uint8_t seq,
+                    uint8_t* frame_out, uint16_t cap);
+uint16_t Build_NAK (uint8_t src, uint8_t dst, uint8_t seq,
+                    uint8_t* frame_out, uint16_t cap);
 
 // Handle a validated received frame (payload already CRC-checked by your parser)
-bool Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t len,uint8_t* txbuf, uint16_t txcap);
+bool Handle_Frame(UART_HandleTypeDef* huart_tx,
+                  const uint8_t* payload, uint16_t len,
+                  uint8_t my_id,
+                  uint8_t* txbuf, uint16_t txcap);
 
 // ARQ sender (stop-and-wait)
-bool ARQ_SendReliable(UART_HandleTypeDef* huart, const uint8_t* user, uint16_t ulen);
+bool ARQ_SendReliable(UART_HandleTypeDef* huart,
+                      uint8_t src, uint8_t dst,
+                      const uint8_t* user, uint16_t ulen);
 void ARQ_Tick(void);
 
 // RX callbacks from your logic/parser
