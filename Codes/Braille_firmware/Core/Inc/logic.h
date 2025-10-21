@@ -10,6 +10,7 @@
 
 #include "stm32c0xx_hal.h"
 #include "frame.h"
+#include "arq.h"
 #include <stdint.h>
 #include <stdbool.h>
 #include "string.h"
@@ -18,35 +19,41 @@
 #include "braille_driver.h"
 #include <stdio.h>
 
+//length
+
 #define MAX_WORD_LENGTH 4
 #define READY_BEEP_TIME 200
-#define SUCCES_BEEP_TIME 500
+#define SUCCESS_BEEP_TIME 500
 
 typedef enum {
 	STATE_WAIT_ASSIGNMENT,
 	STATE_READY,
+	STATE_START,
 	STATE_GAME,
 	STATE_VERIFY,
 	STATE_SUCCESS,
 	STATE_SHUTDOWN
 }GameState;
 
-
-typedef enum {
-    CMD_UNKNOWN = 0,
-    CMD_CHAR,
-    CMD_WORD,
-    CMD_START,
-    CMD_RESET,
-    CMD_FIRST,
-    CMD_ANCHOR
-} CommandType;
-
 typedef enum{
 	BEEP_NONE,
 	BEEP_READY,
 	BEEP_SUCCESS,
 }BuzzerState;
+
+typedef enum{
+	LINK_LEFT=0,
+	LINK_RIGHT
+}LinkId;
+
+typedef struct{
+	uint8_t buf[256];
+	uint16_t len;
+	uint8_t seq;
+	uint8_t flags;
+	LinkId link;
+	UART_HandleTypeDef* reply;
+}InMsg;
 
 extern volatile GameState logic_state;
 extern volatile char my_letter;
@@ -59,6 +66,10 @@ void Logic_OnUARTReceive(UART_HandleTypeDef* huart);
 
 void logic_ProcessFrame(uint8_t* temp_buffer, uint16_t len);
 
+// (Opcional) hooks que ARQ invoca; los declaro por claridad
+void Logic_OnSendOk(uint8_t seq);
+void Logic_OnSendFailed(uint8_t seq);
+bool Logic_SendReliable(UART_HandleTypeDef* huart, const uint8_t* user, uint16_t len);  // new
 void Logic_ProcessUserData( uint8_t* user, uint16_t u_len);
 
 

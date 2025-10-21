@@ -1,5 +1,6 @@
 ../Core/Src/frame.c:11:24:cb_next	16	static
 ../Core/Src/frame.c:15:6:CircularBuffer_Init	16	static
+../Core/Src/frame.c:21:6:FP_Init	24	static
 ../Core/Src/frame.c:31:6:CircularBuffer_Push	32	static
 ../Core/Src/frame.c:43:20:cb_try_get	16	static
 ../Core/Src/frame.c:61:17:crc16_ccitt	24	static

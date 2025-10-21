@@ -1,0 +1,384 @@
+/*
+ * logic.c
+ *
+ *  Created on: Sep 17, 2025
+ *      Author: santiago
+ */
+
+
+#include "logic.h"
+
+volatile GameState logic_state = STATE_WAIT_ASSIGNMENT;
+
+static CircularBuffer circ_left;
+static CircularBuffer circ_right;
+static uint8_t uart_byte_left;
+static uint8_t uart_byte_right;
+
+static UART_HandleTypeDef* uart_left = NULL;
+static UART_HandleTypeDef* uart_right = NULL;
+
+static TIM_HandleTypeDef* buzzer_timer = NULL;
+static BuzzerState buzzer_state = BEEP_NONE;
+static uint32_t buzzer_start_time = 0;
+
+static FrameParser fp_left, fp_right;
+
+//buzon ARQ
+#define INBOX_CAP 8
+static InMsg inbox[INBOX_CAP];
+static uint8_t in_w=0, in_r=0, in_n=0;
+
+volatile char my_letter = '\0';
+char original_word[MAX_WORD_LENGTH+1] = {0};
+static uint8_t word_len = 0;
+
+static uint8_t my_index = 0xFF;
+static bool have_word = false;
+static bool have_index = false;
+static bool is_first = false;
+static bool is_anchor = false;
+
+static bool seq_started = false;
+static uint32_t t_next_seq_ms = 0;
+#define SEQ_RETRY_MS 300
+
+static uint8_t payload_left[UART_BUFFER_SIZE];
+static uint8_t payload_right[UART_BUFFER_SIZE];
+
+// ------------- Utils -------------
+// get current time in ms
+static inline uint32_t now_ms(void){
+	return HAL_GetTick();
+}
+
+//start buzzer tone
+static void StartBuzzer(BuzzerState state){
+	buzzer_state = state;
+	buzzer_start_time = __HAL_TIM_GET_COUNTER(buzzer_timer);
+	TIM1->CCR1 = 1500; // START Beep
+}
+
+// Buzzer update
+static bool UpdateBuzzer(void){
+	if(buzzer_state == BEEP_NONE) return true;
+	uint32_t now = __HAL_TIM_GET_COUNTER(buzzer_timer);
+	uint32_t elapsed = (now >= buzzer_start_time) ? now - buzzer_start_time : (0xFFFF - buzzer_start_time + now);
+
+	uint32_t duration = 0;
+	if(buzzer_state == BEEP_READY) duration = READY_BEEP_TIME;
+	if(buzzer_state == BEEP_SUCCESS) duration = SUCCESS_BEEP_TIME;
+
+	if(elapsed >= duration){
+		TIM1->CCR1 = 0;
+		buzzer_state = BEEP_NONE;
+		return true;
+	}
+
+	return false;
+}
+
+static bool inbox_push(const uint8_t *p, uint16_t n, uint8_t seq, uint8_t flags, LinkId link, UART_HandleTypeDef* reply) {
+
+	if(!p || !n)return true;
+    if ((n > sizeof(inbox[0].buf) )|| (in_n >= INBOX_CAP)) return false;
+
+    InMsg *m = &inbox[in_w];
+
+    memcpy(m->buf, p, n);
+    m->len = n;
+    m->seq = seq;
+    m->flags = flags;
+    m->link = link;
+    m->reply = reply;
+
+    in_w = (uint8_t)((in_w + 1)% INBOX_CAP);
+    in_n++;
+    return true;
+}
+
+static inline bool inbox_peek(InMsg **out) {
+	if (!in_n) return false;
+
+	*out = &inbox[in_r];
+	return true;
+}
+
+static inline void inbox_pop(void) {
+	if (in_n) {
+		in_r = (uint8_t)((in_r + 1) % INBOX_CAP);
+		in_n--;
+	}
+}
+
+// ------------- ARQ + Parser pump -------------
+static void PumpParser(FrameParser* fp, CircularBuffer* cb, UART_HandleTypeDef* reply_uart, LinkId link_id) {
+    while (1) {
+        FrameParserState st = FP_Tick(fp, cb);
+        if (st == NO_DATA) break;
+        if (st == GOOD_FRAME) {
+            ArqInd ind;
+            ArqEvent ev = Handle_Frame(reply_uart, fp->out, fp->len, true /*auto-ack*/, arq.frame, sizeof(arq.frame), &ind);
+
+            if (ev == ARQ_EVT_DATA && ind.user && ind.user_len) {
+            	(void)inbox_push(ind.user, ind.user_len, ind.seq, ind.flags, link_id, reply_uart);
+            }
+
+            FP_Init(fp, fp->out, fp->len);
+        }
+    }
+}
+
+// ------------- TX helpers (ARQ) -------------
+static inline bool send_right_str(const char* s){
+    return Logic_SendReliable(uart_right, (const uint8_t*)s, (uint16_t)strlen(s));
+}
+static inline bool send_left_str(const char* s){
+    return Logic_SendReliable(uart_left,  (const uint8_t*)s, (uint16_t)strlen(s));
+}
+bool Logic_SendReliable(UART_HandleTypeDef* huart, const uint8_t* user, uint16_t len){
+    return ARQ_SendReliable(huart, user, len); // usa tu ARQ (stop&wait) :contentReference[oaicite:6]{index=6}
+}
+
+// ------------- RX IRQ hook -------------
+void Logic_OnUARTReceive(UART_HandleTypeDef* huart) {
+	 if (huart == uart_left) {
+		CircularBuffer_Push(&circ_left, uart_byte_left);
+		HAL_UART_Receive_IT(uart_left, &uart_byte_left, 1);
+
+	} else if (huart == uart_right) {
+		CircularBuffer_Push(&circ_right, uart_byte_right);
+		HAL_UART_Receive_IT(uart_right, &uart_byte_right, 1);
+	}
+}
+
+// ------------- Init -------------
+void Logic_Init(UART_HandleTypeDef* huart_left_in, UART_HandleTypeDef* huart_right_out, TIM_HandleTypeDef* buzzer_tim){
+	uart_left = huart_left_in;
+	uart_right = huart_right_out;
+	buzzer_timer = buzzer_tim;
+
+	CircularBuffer_Init(&circ_left);
+	CircularBuffer_Init(&circ_right);
+
+	FP_Init(&fp_left, payload_left, sizeof(payload_left));
+	FP_Init(&fp_right, payload_right, sizeof(payload_right));
+
+	ARQ_Init();
+
+	HAL_UART_Receive_IT(uart_left, &uart_byte_left, 1);  // antes: UART_BUFFER_SIZE
+	HAL_UART_Receive_IT(uart_right, &uart_byte_right, 1);
+
+	logic_state  = STATE_WAIT_ASSIGNMENT;
+	have_word = have_index = is_first = is_anchor = seq_started = false;
+	my_index = 0xFF; my_letter = '\0';
+	memset(original_word, 0, sizeof(original_word));
+	word_len = 0;
+}
+
+// ------------- Command helpers-------------
+static void handle_reset_all(void){
+	//cleans local state
+	logic_state  = STATE_WAIT_ASSIGNMENT;
+	have_word = have_index = is_first = is_anchor = seq_started = false;
+	my_index = 0xFF; my_letter = '\0';
+	memset(original_word, 0, sizeof(original_word));
+	word_len = 0;
+}
+
+static void maybe_send_ready(void){
+	if (have_word && have_index){
+		//notify temporal master
+		send_left_str("READY");
+	}
+}
+
+static void relay_ready_from_right(){
+	send_left_str("READY");
+}
+
+
+static void handle_word_from_left(const char* s){
+	// s = "WORD:XXXX"
+	const char* p = s + 5;
+	strncpy(original_word, p, MAX_WORD_LENGTH);
+	original_word[MAX_WORD_LENGTH]='\0';
+	word_len = (uint8_t)strlen(original_word);
+	have_word = (word_len > 0);
+
+	// if i have the index recover letter
+	if (have_index && my_index < word_len){
+		my_letter = original_word[my_index];
+		Braille_Display(my_letter);
+	}
+
+	if(uart_right) send_right_str(s);
+
+	maybe_send_ready;
+}
+
+static void handle_index_from_left(const char* s_mut){
+	//s_mut = INDEX:XXXX
+	char* digits = s_mut+6;
+	if(!*digits) return;
+
+	// consume first digit
+	char first = *digits;
+	if (first < '0' || first > '3') return;
+	my_index= (uint8_t)(first - '0');
+	have_index = true;
+
+	// role flags
+	is_first =  (my_index == 0);
+	is_anchor = (word_len ? (my_index ==(word_len-1)): false);
+
+	// if have word assign letter
+	if(have_word && my_index < word_len){
+		my_letter = original_word[my_index];
+		Braille_Display(my_letter);
+	}
+
+	//resend the rest of the message
+	if(*(digits+1)&& uart_right){
+		//reconstruct "INDEX:<REST>
+		char fwd[UART_BUFFER_SIZE]={0};
+		snprintf(fwd, sizeof(fwd), "INDEX,%s", digits+1);
+		send_right;
+	}
+
+	maybe_send_ready;
+}
+
+static void handlestart_any_side(void){
+	// buzzer signal READY -> START
+	if(logic_state == STATE_WAIT_ASSIGNMENT && have_word && have_index){
+		logic_state = STATE_START;
+	}
+    if (logic_state == STATE_START){
+        if (buzzer_state == BEEP_NONE) StartBuzzer(BEEP_READY);
+
+        if (UpdateBuzzer()){
+            logic_state = STATE_GAME;
+            // Propaga START hacia la derecha para los que estén más allá
+            if (uart_right) send_right_str("START");
+        }
+    }
+}
+
+static void handle_seq_relay(const char* s, LinkId from){
+	//s = "SEQ:..."
+	const char* seq = s + 4;
+	char out[UART_BUFFER_SIZE];
+
+	//concatenate
+	int n = snprintf(out, sizeof(out), "SEQ:%s%c", seq, (my_letter ? my_letter : '?'));
+
+	// if anchor, correct length and correct word then win
+	if(is_anchor && have_word){
+		const char* seq_only = out+4;
+		if( (int)strlen(seq_only) == (int)word_len && strcmp(seqonly, original_word, word_len)==0){
+			// WIN
+			send_left_str("WIN");
+			logic_state = STATE_SUCCESS;
+			return;
+		}
+	}
+
+	if (from == LINK_LEFT && uart_right){
+	        Logic_SendReliable(uart_right, (uint8_t*)out, (uint16_t)n);
+	    }
+
+}
+
+static void handle_win_any_side(LinkId from){
+    // Propaga al otro lado y pasa a SUCCESS
+    if (from == LINK_LEFT && uart_right)  send_right_str("WIN");
+    if (from == LINK_RIGHT && uart_left)  send_left_str("WIN");
+    logic_state = STATE_SUCCESS;
+}
+
+static void first_try_lick_seq(void){
+	// Sends SEQ and retrys every SEQ_RETRY_MS while in state GAME
+	if(!is_first || logic_state != STATE_GAME || !have_word || my_letter=='\0') return;
+	if(now_ms() >= t_next_seq_ms){
+		char msg[16];
+		snprintf(msg, sizeof(msg), "SEQ:%c", my_letter);
+		send_right_str(msg);
+		seq_started = true;
+		t_next_seq_ms = now_ms + SEQ_RETRY_MS;
+	}
+}
+
+// Comms processing
+void Logic_Process(void){
+
+	// pump parser(framing + ARQ)
+	if (uart_left)  PumpParser(&fp_left,  &circ_left,  uart_left);
+	if (uart_right) PumpParser(&fp_right, &circ_right, uart_right);
+
+	// ARQ timers (retries/timeouts)
+	ARQ_Tick();
+
+	InMsg *m;
+
+	while(inbox_peek(&m)){
+		char tmp[256];
+		uint16_t L = m->len < sizeof(tmp)-1 ? m->len : sizeof(tmp)-1;
+		memcpy(tmp, m->buf, L);
+		tmp[L] = '\0';
+
+		if      (!strncmp(tmp, "RESET", 5)) { handle_reset_all(); }
+		else if (!strncmp(tmp, "WORD:", 5) && m->link == LINK_LEFT) { handle_word_from_left(tmp); }
+		else if (!strncmp(tmp, "INDEX:", 6) && m->link == LINK_LEFT){ handle_index_from_left(tmp); }
+		else if (!strncmp(tmp, "READY", 5) && m->link == LINK_RIGHT){ relay_ready_from_right();}
+		else if (!strncmp(tmp, "START", 5)) { handle_start_any_side(); }
+		else if (!strncmp(tmp, "SEQ:", 4))  { handle_seq_relay(tmp, m->link); }
+		else if (!strncmp(tmp, "WIN", 3))   { handle_win_any_side(m->link); }
+
+		inbox_pop();
+	}
+
+	 // FSM ligera por estado
+	    switch (logic_state){
+	        case STATE_WAIT_ASSIGNMENT:
+	            // Se queda aquí hasta tener WORD+INDEX y posteriormente START
+	            break;
+
+	        case STATE_START:
+	            handle_start_any_side(); // beep + transición
+	            break;
+
+	        case STATE_READY:
+	            // (no lo usamos explícito: READY lo gestiona handle_start_any_side)
+	            break;
+
+	        case STATE_GAME:
+	            first_try_kick_seq(); // si soy first, envío/rehago SEQ cada SEQ_RETRY_MS
+	            break;
+
+	        case STATE_VERIFY:
+	            // no lo usamos (podrías validar integridad aquí si quieres)
+	            break;
+
+	        case STATE_SUCCESS:
+	            if (buzzer_state == BEEP_NONE) StartBuzzer(BEEP_SUCCESS);
+	            else if (UpdateBuzzer()) logic_state = STATE_SHUTDOWN;
+	            break;
+
+	        case STATE_SHUTDOWN:
+	            // Solo atiende RESET (ya manejado más arriba en el loop)
+	            break;
+	    }
+}
+
+// ---- Hooks que invoca ARQ (opcionalmente para logging/telemetría) ----
+void Logic_OnSendOk(uint8_t seq){ (void)seq; }
+void Logic_OnSendFailed(uint8_t seq){ (void)seq; }
+
+// --- Reset manual ---
+void Logic_TriggerReset(void) {
+	handle_reset_all();
+}
+
+
+

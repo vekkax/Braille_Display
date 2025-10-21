@@ -1,0 +1,79 @@
+/*
+ * comms.h
+ *
+ *  Created on: Jul 26, 2025
+ *      Author: santiago
+ */
+
+#ifndef INC_FRAME_H_
+#define INC_FRAME_H_
+
+#include "stm32c0xx_hal.h"
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+#include <stdlib.h>
+#include "frame.h"
+#include "arq.h"
+#include "logic.h"
+
+#define UART_BUFFER_SIZE 32
+#define UART_CIRC_BUFFER_SIZE 64
+#define SYNC1 0xFF
+#define SYNC2 0x5A
+#define END_BYTE 0x00
+#define MAX_PAYLOAD 16
+
+#define UART_LEFT huart2
+#define UART_RIGHT huart1
+
+
+typedef struct {
+	uint8_t buffer[UART_CIRC_BUFFER_SIZE];
+	volatile uint16_t head;
+	volatile uint16_t tail;
+}CircularBuffer;
+
+typedef enum {
+    START_FRAME = 0,   // reset/hunt
+    SYNC_1,            // expect 0xFF
+    SYNC_2,            // expect 0x5A
+    LEN_L,             // read length L
+    LEN_H,             // read length H
+    PAYLOAD2BUFFER,    // read 'len' bytes
+    CRC_L_READ,        // read CRC low
+    CRC_H_READ,        // read CRC high
+    END_READ,          // read END byte (0x00)
+    CRC_VALIDATE,      // check CRC and length limits
+
+    GOOD_FRAME,        // a full, valid frame is ready
+    NO_DATA,           // not enough bytes available right now
+    SKIPPED            // we skipped a byte to resync (bad/garbage)
+} FrameParserState;
+
+typedef struct {
+    FrameParserState st;
+
+    uint16_t len;       // expected payload length
+    uint16_t got;       // how many payload bytes copied
+    uint16_t rx_crc;    // CRC received
+    uint16_t crc;       // running CRC over [lenL,lenH,payload...]
+
+    // where to write the payload (provided by caller)
+    uint8_t *out;
+    uint16_t out_cap;
+} FrameParser;
+
+
+
+void CircularBuffer_Init(CircularBuffer* cb);
+bool CircularBuffer_ReadLine(CircularBuffer* cb, char* out, size_t max_len);
+void CircularBuffer_Push(CircularBuffer* cb, uint8_t c);
+int UART_TryParseFrame(CircularBuffer* cb, uint8_t* out, uint16_t out_size);
+uint16_t UART_BuildFrame(const uint8_t* payload, uint16_t plen, uint8_t* out, uint16_t out_cap);
+bool Comms_SendFrame(UART_HandleTypeDef *huart, const uint8_t *txbuf, uint16_t len, uint32_t timeout);
+void FP_Init(FrameParser* fp, uint8_t* out, uint16_t out_cap);
+
+
+
+#endif /* INC_FRAME_H_ */

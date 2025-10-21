@@ -1,0 +1,209 @@
+/*
+ * arq.c
+ *
+ *  Created on: Sep 27, 2025
+ *      Author: santiago
+ */
+
+/*
+ * arq.c
+ * Reliable ARQ over framed UART
+ */
+
+#include "arq.h"
+
+// ---------- Global context ----------
+ArqTx arq;
+
+// ---------- Small time helpers (no more implicit NowMs/TimePassed) ----------
+static inline uint32_t NowMs(void) {
+    return HAL_GetTick(); // 1 ms tick from HAL
+}
+static inline bool TimePassed(uint32_t now, uint32_t deadline) {
+    // handles wrap-around of 32-bit tick
+    return (int32_t)(now - deadline) >= 0;
+}
+
+// ---------- Builders (pure, no UART inside) ----------
+uint16_t Build_Data(uint8_t seq, bool req_ack, const uint8_t* user, uint16_t user_len, uint8_t* frame_out, uint16_t cap){
+    if (user_len > (MAX_PAYLOAD - sizeof(RHdr))) return 0;
+
+    RHdr h = {
+        .msg_type = T_DATA,
+        .seq      = seq,
+        .flags    = (uint8_t)(req_ack ? FLAG_REQ_ACK : 0)
+    };
+
+    uint8_t payload[user_len+sizeof(h)];
+    memcpy(payload, &h, sizeof(h));
+    memcpy(payload + sizeof(h), user, user_len);
+
+    return UART_BuildFrame(payload, (uint16_t)(sizeof(h) + user_len), frame_out, cap);
+}
+
+uint16_t Build_ACK(uint8_t seq, uint8_t* frame_out, uint16_t cap){
+    RHdr h = { .msg_type=T_ACK, .seq=seq, .flags=0 };
+    return UART_BuildFrame((uint8_t*)&h, sizeof(h), frame_out, cap);
+}
+
+uint16_t Build_NAK(uint8_t seq, uint8_t* frame_out, uint16_t cap){
+    RHdr h = { .msg_type=T_NAK, .seq=seq, .flags=0 };
+    return UART_BuildFrame((uint8_t*)&h, sizeof(h), frame_out, cap);
+}
+
+// ---------- RX side: handle one validated frame ----------
+bool Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t len, uint8_t* txbuf, uint16_t txcap){
+    if (len < sizeof(RHdr)) return false;
+
+    const RHdr* h = (const RHdr*)payload;
+
+    switch (h->msg_type){
+		case T_DATA: {
+			const uint8_t* user = payload + sizeof(RHdr);
+			const uint16_t ulen = (uint16_t)(len - sizeof(RHdr));
+			static uint8_t expected_seq = 0;
+
+			if (h->seq == expected_seq) {
+				// Application consumes user data:
+				// Provide your own function (prototype in your "logic" module)
+				extern void Logic_ProcessUserData(uint8_t* data, uint16_t len);
+				Logic_ProcessUserData((uint8_t*)user, ulen);
+
+				if (h->flags & FLAG_REQ_ACK) {
+					uint16_t n = Build_ACK( h->seq, txbuf, txcap);
+					if (n) (void)Comms_SendFrame(huart_tx, txbuf, n, 100);
+				}
+				expected_seq++;
+			} else {
+				// Duplicate/out-of-order → re-ACK last good
+				if (h->flags & FLAG_REQ_ACK) {
+					uint8_t last_ok = (uint8_t)(expected_seq - 1);
+					uint16_t n = Build_ACK(last_ok, txbuf, txcap);
+					if (n) (void)Comms_SendFrame(huart_tx, txbuf, n, 100);
+				}
+			}
+			return true;
+		}
+
+		case T_ACK:{
+			ARQ_OnAckReceived(h->seq);
+			return true;
+		}
+
+		case T_NAK:{
+			ARQ_OnNakReceived(h->seq);
+			return true;
+		}
+
+
+		case T_PING: {
+			RHdr pong = { .msg_type=T_PONG,
+						  .seq=h->seq,
+						  .flags=0
+			};
+
+			uint16_t n = UART_BuildFrame((uint8_t*)&pong, sizeof(pong), txbuf, txcap);
+			if (n) (void)Comms_SendFrame(huart_tx, txbuf, n, 100);
+			return true;
+		}
+
+		case T_PONG:{
+			ARQ_OnPong(h->seq);   // optional
+			return true;
+		}
+    }
+    return false;
+
+}
+
+// ---------- ARQ TX side ----------
+void ARQ_Init(void){
+    memset(&arq, 0, sizeof(arq));
+    arq.st = S_IDLE;
+    arq.next_seq = 0;
+    arq.huart_tx = NULL;
+}
+
+bool ARQ_SendReliable(UART_HandleTypeDef* huart, const uint8_t* user, uint16_t ulen) {
+    if (arq.st != S_IDLE) return false; // one outstanding at a time
+
+    arq.huart_tx   = huart;
+    arq.pending_seq = arq.next_seq;
+
+    arq.frame_len = Build_Data( arq.pending_seq, true, user, ulen, arq.frame, sizeof(arq.frame));
+    if (!arq.frame_len) return false;
+
+    if (!Comms_SendFrame(arq.huart_tx, arq.frame, arq.frame_len, 100))
+        return false;
+
+    arq.retries_left = 3;
+    arq.t_expire_ms  = NowMs() + ACK_TIMEOUT_MS;
+    arq.st = S_WAIT_ACK;
+    return true;
+}
+
+void ARQ_Tick(void) {
+    switch (arq.st) {
+
+    	case S_IDLE:{
+			return;
+		}
+
+		case S_WAIT_ACK:{
+			if (TimePassed(NowMs(), arq.t_expire_ms)) {
+				if (arq.retries_left == 0) {
+					// notify application of failure
+					extern void Logic_OnSendFailed(uint8_t seq);
+					Logic_OnSendFailed(arq.pending_seq);
+					arq.st = S_IDLE;
+				} else {
+					arq.retries_left--;
+					// mark header as retransmission (flags is byte 2 of RHdr)
+					((RHdr*)(arq.frame + 1 + 1 ))->flags |= FLAG_IS_RETX;
+					(void)Comms_SendFrame(arq.huart_tx, arq.frame, arq.frame_len, 100);
+					arq.t_expire_ms = NowMs() + ACK_TIMEOUT_MS;
+					arq.st = S_RETX;
+				}
+			}
+
+			return;
+
+		}
+		case S_RETX:{
+			// immediately go back to waiting
+			arq.st = S_WAIT_ACK;
+			return;
+		}
+	}
+}
+
+void ARQ_OnAckReceived(uint8_t seq){
+    if (arq.st == S_WAIT_ACK && seq == arq.pending_seq) {
+        extern void Logic_OnSendOk(uint8_t seq);
+        Logic_OnSendOk(seq);
+        arq.next_seq++;
+        arq.st = S_IDLE;
+    }
+}
+
+void ARQ_OnNakReceived(uint8_t seq){
+    if (arq.st != S_IDLE && seq == arq.pending_seq) {
+        if (arq.retries_left) {
+            arq.retries_left--;
+            ((RHdr*)(arq.frame + 1 + 1 + 2))->flags |= FLAG_IS_RETX;
+            (void)Comms_SendFrame(arq.huart_tx, arq.frame, arq.frame_len, 100);
+            arq.t_expire_ms = NowMs() + ACK_TIMEOUT_MS;
+            arq.st = S_WAIT_ACK;
+        } else {
+            extern void Logic_OnSendFailed(uint8_t seq);
+            Logic_OnSendFailed(seq);
+            arq.st = S_IDLE;
+        }
+    }
+}
+
+// ---------- Optional weak hooks (so you can link even without logic.c) ----------
+__attribute__((weak)) void Logic_ProcessUserData(uint8_t* data, uint16_t len) { (void)data; (void)len; }
+__attribute__((weak)) void Logic_OnSendOk(uint8_t seq)   { (void)seq; }
+__attribute__((weak)) void Logic_OnSendFailed(uint8_t s) { (void)s; }
+__attribute__((weak)) void ARQ_OnPong(uint8_t seq)       { (void)seq; }

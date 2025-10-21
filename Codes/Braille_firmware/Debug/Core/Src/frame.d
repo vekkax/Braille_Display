@@ -31,8 +31,7 @@ Core/Src/frame.o: ../Core/Src/frame.c ../Core/Inc/frame.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_tim_ex.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart_ex.h \
- ../Core/Inc/logic.h ../Core/Inc/frame.h ../Core/Inc/main.h \
- ../Core/Inc/braille_driver.h
+ ../Core/Inc/frame.h
 ../Core/Inc/frame.h:
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal.h:
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_ll_system.h:
@@ -66,7 +65,4 @@ Core/Src/frame.o: ../Core/Src/frame.c ../Core/Inc/frame.h \
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_tim_ex.h:
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart.h:
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart_ex.h:
-../Core/Inc/logic.h:
 ../Core/Inc/frame.h:
-../Core/Inc/main.h:
-../Core/Inc/braille_driver.h:

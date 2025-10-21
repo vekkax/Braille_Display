@@ -1,0 +1,313 @@
+/*
+ * logic.c
+ *
+ *  Created on: Sep 17, 2025
+ *      Author: santiago
+ */
+
+
+#include "logic.h"
+
+
+volatile GameState logic_state = STATE_WAIT_ASSIGNMENT;
+volatile CommandType CMD = CMD_UNKNOWN;
+
+static CircularBuffer circ_left;
+static CircularBuffer circ_right;
+static uint8_t uart_byte_left;
+static uint8_t uart_byte_right;
+
+static UART_HandleTypeDef* uart_left = NULL;
+static UART_HandleTypeDef* uart_right = NULL;
+
+
+volatile char my_letter = '\0';
+char original_word[MAX_WORD_LENGTH+1] = {0};
+static uint8_t my_index = 0xFF;
+static bool is_first = false;
+static bool is_anchor = false;
+static bool seq_started = false;
+
+static TIM_HandleTypeDef* buzzer_timer = NULL;
+static BuzzerState buzzer_state = BEEP_NONE;
+static uint32_t buzzer_start_time = 0;
+
+static uint8_t payload_left[UART_BUFFER_SIZE], payload_right[UART_BUFFER_SIZE];
+
+static FrameParser fp_left, fp_right;
+
+
+// Command Parser
+static CommandType ParseCommand(char* msg){
+	    if (strncmp(msg, "WORD:", 5) == 0) return CMD_WORD;
+	    else if (strncmp(msg, "INDEX", 5) == 0) return CMD_INDEX;
+	    else if (strncmp(msg, "RESET", 5) == 0) return CMD_RESET;
+	    else return CMD_UNKNOWN;
+}
+
+
+void StartBuzzer(BuzzerState state){
+	buzzer_state = state;
+	buzzer_start_time = __HAL_TIM_GET_COUNTER(buzzer_timer);
+	TIM1->CCR1 = 1500; // START Beep
+}
+
+// Buzzer update
+bool UpdateBuzzer(void){
+	uint32_t now = __HAL_TIM_GET_COUNTER(buzzer_timer);
+	uint32_t elapsed = (now >= buzzer_start_time) ? now - buzzer_start_time : (0xFFFF - buzzer_start_time + now);
+
+	uint32_t duration = 0;
+
+	switch(buzzer_state){
+		case BEEP_NONE:
+			return true;
+		case BEEP_READY:
+			duration = READY_BEEP_TIME;
+			break;
+		case BEEP_SUCCESS:
+			duration = SUCCES_BEEP_TIME;
+			break;
+		default:
+			TIM1->CCR1 = 0;
+			buzzer_state = BEEP_NONE;
+			return true;
+			break;
+
+	}
+
+	if(elapsed >= duration){
+		TIM1->CCR1 = 0;
+		buzzer_state = BEEP_NONE;
+		return true;
+	}
+
+	return false;
+}
+
+
+// Initialization
+void Logic_Init(UART_HandleTypeDef* huart_left,UART_HandleTypeDef* huart_right, TIM_HandleTypeDef* buzzer_tim){
+	uart_left = huart_left;
+	uart_right = huart_right;
+	buzzer_timer = buzzer_tim;
+
+	CircularBuffer_Init(&circ_left);
+	CircularBuffer_Init(&circ_right);
+
+	FP_Init(&fp_left, payload_left, sizeof(payload_left));
+	FP_Init(&fp_left, payload_left, sizeof(payload_left));
+
+	ARQ_Init();
+
+	HAL_UART_Receive_IT(uart_left, &uart_byte_left, 1);  // antes: UART_BUFFER_SIZE
+	HAL_UART_Receive_IT(uart_right, &uart_byte_right, 1);
+}
+
+static void PumpParser(FrameParser* fp, CircularBuffer* cb, UART_HandleTypeDef* reply_uart) {
+    while (1) {
+        FrameParserState s = FP_Tick(fp, cb);
+        if (s == NO_DATA) break;
+        if (s == GOOD_FRAME) {
+            ArqInd ind;
+            ArqEvent ev = Handle_Frame(reply_uart, fp->out, fp->len, true /*auto_ack*/, arq.frame, sizeof(arq.frame), &ind);
+            if (ev == ARQ_EVT_DATA && ind.user && ind.user_len) {
+                // You decide what to do with payload:
+                Logic_ProcessUserData((uint8_t*)ind.user, ind.user_len);     // your current handler
+                // or route elsewhere, queue it, parse binary, etc.
+            }
+            FP_Init(fp, fp->out, fp->len);
+        }
+    }
+}
+
+// --- Manejador de recepción por interrupción ---
+void Logic_OnUARTReceive(UART_HandleTypeDef* huart) {
+	 if (huart == uart_left) {
+		CircularBuffer_Push(&circ_left, uart_byte_left);
+		HAL_UART_Receive_IT(uart_left, &uart_byte_left, 1);
+
+	} else if (huart == uart_right) {
+		CircularBuffer_Push(&circ_right, uart_byte_right);
+		HAL_UART_Receive_IT(uart_right, &uart_byte_right, 1);
+	}
+}
+
+
+
+// Comms processing
+void Logic_Process(void){
+
+	// new: consume any framed data waiting on either side
+	if (uart_left)  PumpParser(&fp_left,  &circ_left,  uart_left);
+	if (uart_right) PumpParser(&fp_right, &circ_right, uart_right);
+
+	// ARQ timers (retries/timeouts)
+	ARQ_Tick();
+
+
+	switch (logic_state) {
+
+	    case STATE_WAIT_ASSIGNMENT:
+
+	    		char msg[UART_BUFFER_SIZE]; if (u_len >= sizeof(msg)) u_len = sizeof(msg)-1;
+	    	    memcpy(msg, user, u_len); msg[u_len] = '\0';
+
+	            CMD = ParseCommand(temp_buffer_left);
+
+	            switch(CMD) {
+
+	    			case CMD_INDEX: {
+
+						// Buscar los dos puntos
+						char* index_str = &temp_buffer_left[5];
+						char* colon_ptr = strchr(index_str,':');
+
+						if(colon_ptr != NULL){
+							*colon_ptr = '\0';
+							uint8_t index = (uint8_t)atoi(index_str);
+
+							char* remaining_letters = colon_ptr + 1;
+
+							if(strlen(remaining_letters)>0){
+								my_letter = remaining_letters[0];
+								my_index = index;
+								Braille_Display(my_letter);
+
+								//Resends leftover
+								if(strlen(&remaining_letters[1])>0 && uart_right != NULL){
+									char forward_msg[UART_BUFFER_SIZE] = {0};
+
+									snprintf(forward_msg, sizeof(forward_msg), "CHAR:%d:%s\r\n", index+1, &remaining_letters[1]);
+									Logic_SendReliable(uart_right, (uint8_t*)forward_msg, (uint16_t)strlen(forward_msg));
+
+								}
+
+							}
+
+						}
+						break;
+					}
+
+
+					// WORD COMMAND
+	    			case CMD_WORD: {
+						strncpy(original_word, &temp_buffer_left[5], MAX_WORD_LENGTH);
+						original_word[MAX_WORD_LENGTH] = '\0';
+
+						//Resends WORD
+						if (uart_right != NULL) {
+								HAL_UART_Transmit(uart_right, (uint8_t*)temp_buffer_left, strlen(temp_buffer_left), HAL_MAX_DELAY);
+							}
+
+						break;
+
+					}
+
+
+	    case STATE_READY:
+	        if (buzzer_state == BEEP_NONE) {
+	            StartBuzzer(BEEP_READY);
+	        } else if (UpdateBuzzer()) {
+	            logic_state = STATE_GAME;
+	        }
+	        break;
+
+	        // START COMMAND
+		case STATE_START:{
+			if (my_letter != '\0' && original_word[0] != '\0') {
+				logic_state = STATE_READY;
+			}
+
+			//Resends START
+			if (uart_right != NULL) {
+					HAL_UART_Transmit(uart_right, (uint8_t*)temp_buffer_left, strlen(temp_buffer_left), HAL_MAX_DELAY);
+				}
+			break;
+		}
+
+	    case STATE_GAME:
+
+	        if (is_first && !seq_started) {
+	            char msg[UART_BUFFER_SIZE];
+	            snprintf(msg, sizeof(msg), "SEQ:%c", my_letter);
+	            HAL_UART_Transmit(uart_right, (uint8_t*)msg, strlen(msg), HAL_TIMEOUT);
+	            seq_started = true;
+	        }
+
+	        // Procesar datos recibidos por la izquierda
+	        if (CircularBuffer_ReadLine(&circ_left, temp_buffer_left,UART_BUFFER_SIZE)){
+
+	            if (strncmp(temp_buffer_left, "SEQ:", 4) == 0) {
+	                char* seq = &temp_buffer_left[4];
+	                char new_seq[UART_BUFFER_SIZE];
+	                snprintf(new_seq, sizeof(new_seq), "%.*s%c", (int)(sizeof(new_seq) - 2), seq, my_letter);
+
+	                if (is_anchor && strcmp(new_seq, original_word) == 0) {
+
+	                    HAL_UART_Transmit(uart_left, (uint8_t*)"WIN", 3, HAL_TIMEOUT);
+	                    logic_state = STATE_SUCCESS;
+
+	                } else {
+
+	                	char msg[UART_BUFFER_SIZE];
+	                    snprintf(msg, sizeof(msg), "SEQ:%.*s", (int)(sizeof(msg) - 5), new_seq);
+	                    HAL_UART_Transmit(uart_right, (uint8_t*)msg, strlen(msg), HAL_TIMEOUT);
+	                }
+	            }
+
+	            else if (strncmp(temp_buffer_left, "WIN", 3) == 0) {
+	                Braille_Display(' ');
+	                logic_state = STATE_SUCCESS;
+	                HAL_UART_Transmit(uart_right, (uint8_t*)temp_buffer_left, strlen(temp_buffer_left), HAL_TIMEOUT);
+	            }
+	        }
+
+	        // Procesar datos recibidos por la derecha
+	        if (CircularBuffer_ReadLine(&circ_right, temp_buffer_right,UART_BUFFER_SIZE)){
+
+	            if (strncmp(temp_buffer_right, "WIN", 3) == 0) {
+	                Braille_Display(' ');
+	                logic_state = STATE_SUCCESS;
+	                HAL_UART_Transmit(uart_left, (uint8_t*)temp_buffer_right, strlen(temp_buffer_right), HAL_TIMEOUT);
+	            }
+	        }
+
+	        break;
+
+	    case STATE_VERIFY:
+	        // (Optional intermediate state)
+	        break;
+
+	    case STATE_SUCCESS:
+	        if (buzzer_state == BEEP_NONE) {
+	            StartBuzzer(BEEP_SUCCESS);
+	        } else if (UpdateBuzzer()) {
+	            logic_state = STATE_SHUTDOWN;
+	        }
+	        break;
+
+	    case STATE_SHUTDOWN:
+	        // Ignore everything unless RESET arrives
+	        if (CircularBuffer_ReadLine(&circ_left, temp_buffer_left,UART_BUFFER_SIZE)) {
+	            if (strncmp(temp_buffer_left, "RESET", 5) == 0) {
+	                Logic_TriggerReset();
+	            }
+	        }
+	        break;
+	    }
+}
+
+bool Logic_SendReliable(UART_HandleTypeDef* huart, const uint8_t* user, uint16_t len) {
+    return ARQ_SendReliable(huart, 0, 0, user, len); // src/dst unused in your 1:1 link
+}
+
+// --- Reset manual ---
+void Logic_TriggerReset(void) {
+    logic_state = STATE_WAIT_ASSIGNMENT;
+    my_letter = '\0';
+    original_word[0] = '\0';
+}
+
+
+

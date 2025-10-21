@@ -1,17 +1,17 @@
-19:29:01 **** Incremental Build of configuration Debug for project Braille_firmware ****
+21:56:41 **** Incremental Build of configuration Debug for project Braille_firmware ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/arq.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/arq.d" -MT"Core/Src/arq.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/arq.o"
+arm-none-eabi-gcc "../Core/Src/logic.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/logic.d" -MT"Core/Src/logic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/logic.o"
 arm-none-eabi-gcc -o "Braille_firmware.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\santiago\Documents\Tesis\Braille_Display\Codes\Braille_firmware\STM32C031G6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Braille_firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Braille_firmware.elf
  
 arm-none-eabi-size  Braille_firmware.elf 
 arm-none-eabi-objdump -h -S Braille_firmware.elf  > "Braille_firmware.list"
    text	   data	    bss	    dec	    hex	filename
-  28220	     96	   2672	  30988	   790c	Braille_firmware.elf
+  31608	     96	   4936	  36640	   8f20	Braille_firmware.elf
 Finished building: default.size.stdout
  
 Finished building: Braille_firmware.list
  
 
-19:29:02 Build Finished. 0 errors, 0 warnings. (took 850ms)
+21:56:42 Build Finished. 0 errors, 0 warnings. (took 898ms)
 
