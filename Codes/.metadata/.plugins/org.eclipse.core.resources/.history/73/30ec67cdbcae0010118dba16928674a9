@@ -278,7 +278,7 @@ static void handle_seq_relay(const char* s, LinkId from){
 	char out[UART_BUFFER_SIZE];
 
 	//concatenate
-	int n = snprintf(out, sizeof(out), "SEQ:%s%c", seq, (my_letter ? my_letter : '?'));
+	//(int n = snprintf(out, sizeof(out), "SEQ:%s%c", seq, (my_letter ? my_letter : '?'));
 
 	// if anchor, correct length and correct word then win
 	if(is_anchor && have_word){
@@ -291,9 +291,9 @@ static void handle_seq_relay(const char* s, LinkId from){
 		}
 	}
 
-	if (from == LINK_LEFT && uart_right){
-	        Logic_SendReliable(uart_right, (uint8_t*)out, (uint16_t)n);
-	   }
+	//if (from == LINK_LEFT && uart_right){
+	//        Logic_SendReliable(uart_right, (uint8_t*)out, (uint16_t)n);
+	//   }
 
 }
 
@@ -330,7 +330,7 @@ void Logic_Process(void){
 	InMsg *m;
 
 	while(inbox_peek(&m)){
-		char tmp[32] = {'\0'};
+		char tmp[32];
 		uint16_t L = m->len < sizeof(tmp)-1 ? m->len : sizeof(tmp)-1;
 		memcpy(tmp, m->buf, L);
 		tmp[L] = '\0';
@@ -366,7 +366,7 @@ void Logic_Process(void){
 	            break;
 
 	        case STATE_GAME:
-	            first_try_kick_seq(); // si soy first, envío/rehago SEQ cada SEQ_RETRY_MS
+	            //first_try_kick_seq(); // si soy first, envío/rehago SEQ cada SEQ_RETRY_MS
 	            break;
 
 	        case STATE_VERIFY:
@@ -380,7 +380,6 @@ void Logic_Process(void){
 
 	        case STATE_SHUTDOWN:
 	            // Solo atiende RESET (ya manejado más arriba en el loop)
-	        	handle_reset_all();
 	            break;
 	    }
 }

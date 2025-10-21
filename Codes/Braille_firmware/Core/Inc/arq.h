@@ -16,7 +16,7 @@
 
 // ----- Frame/header constants you already use -----
 #ifndef MAX_PAYLOAD
-#define MAX_PAYLOAD 256
+#define MAX_PAYLOAD 32
 #endif
 
 // Flags for RHdr.flags

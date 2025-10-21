@@ -1,7 +1,7 @@
 import serial, sys, time
 from threading import Thread
 
-PORT = "COM5"          # <-- cambia según tu PC (Linux: '/dev/ttyACM0' o '/dev/ttyUSB0')
+PORT = "COM3"          # <-- cambia según tu PC (Linux: '/dev/ttyACM0' o '/dev/ttyUSB0')
 BAUD = 115200
 
 def reader(ser):
@@ -26,12 +26,13 @@ def main():
 
         print("Commands:")
         print("  word HOLA         -> SET WORD HOLA")
-        print("  index 2301        -> SET INDEX 2301")
+        print("  index 3210        -> SET INDEX 2301")
         print("  start             -> SEND START")
         print("  reset             -> SEND RESET")
         print("  status            -> STATUS")
         print("  quit              -> exit")
-
+        print("  seq HOLA          -> SEND SEQ HOLA" )
+        print("  win               -> SEND WIN" )
         while True:
             try:
                 s = input("> ").strip()
@@ -50,6 +51,11 @@ def main():
                     send_line(ser, "SEND RESET")
                 elif s == "status":
                     send_line(ser, "STATUS")
+                elif s.startswith("seq "):
+                    idx = s.split()[1].upper()
+                    send_line(ser, f"SEND SEQ {idx}")
+                elif s == "win":
+                    send_line(ser, "SEND WIN")
                 else:
                     print("unknown command")
             except KeyboardInterrupt:

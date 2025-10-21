@@ -47,7 +47,7 @@ typedef enum{
 }LinkId;
 
 typedef struct{
-	uint8_t buf[256];
+	uint8_t buf[32];
 	uint16_t len;
 	uint8_t seq;
 	uint8_t flags;

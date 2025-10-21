@@ -366,7 +366,7 @@ void Logic_Process(void){
 	            break;
 
 	        case STATE_GAME:
-	            first_try_kick_seq(); // si soy first, envío/rehago SEQ cada SEQ_RETRY_MS
+	            //first_try_kick_seq(); // si soy first, envío/rehago SEQ cada SEQ_RETRY_MS
 	            break;
 
 	        case STATE_VERIFY:
@@ -380,7 +380,6 @@ void Logic_Process(void){
 
 	        case STATE_SHUTDOWN:
 	            // Solo atiende RESET (ya manejado más arriba en el loop)
-	        	handle_reset_all();
 	            break;
 	    }
 }

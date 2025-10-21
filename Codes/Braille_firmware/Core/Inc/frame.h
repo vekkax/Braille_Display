@@ -20,7 +20,7 @@
 #define SYNC1 0xFF
 #define SYNC2 0x5A
 #define END_BYTE 0x00
-#define MAX_PAYLOAD 16
+#define MAX_PAYLOAD 32
 
 #define UART_LEFT huart2
 #define UART_RIGHT huart1

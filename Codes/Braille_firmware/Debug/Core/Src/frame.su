@@ -6,6 +6,6 @@
 ../Core/Src/frame.c:61:17:crc16_ccitt	24	static
 ../Core/Src/frame.c:79:20:crc16_ccitt_update	24	static
 ../Core/Src/frame.c:108:18:FP_Tick	24	static
-../Core/Src/frame.c:235:10:UART_BuildFrame	64	static
+../Core/Src/frame.c:235:10:UART_BuildFrame	80	static
 ../Core/Src/frame.c:263:6:CircularBuffer_ReadLine	40	static
 ../Core/Src/frame.c:294:6:Comms_SendFrame	32	static

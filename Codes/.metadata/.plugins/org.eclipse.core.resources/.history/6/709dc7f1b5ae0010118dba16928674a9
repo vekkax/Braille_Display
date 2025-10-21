@@ -13,9 +13,9 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
-#include "logic.h"
+#include "frame.h"
 
-#define UART_BUFFER_SIZE 16
+#define UART_BUFFER_SIZE 32
 #define UART_CIRC_BUFFER_SIZE 64
 #define SYNC1 0xFF
 #define SYNC2 0x5A
@@ -70,7 +70,8 @@ void CircularBuffer_Push(CircularBuffer* cb, uint8_t c);
 int UART_TryParseFrame(CircularBuffer* cb, uint8_t* out, uint16_t out_size);
 uint16_t UART_BuildFrame(const uint8_t* payload, uint16_t plen, uint8_t* out, uint16_t out_cap);
 bool Comms_SendFrame(UART_HandleTypeDef *huart, const uint8_t *txbuf, uint16_t len, uint32_t timeout);
-
+void FP_Init(FrameParser* fp, uint8_t* out, uint16_t out_cap);
+FrameParserState FP_Tick(FrameParser* fp, CircularBuffer* cb);
 
 
 #endif /* INC_FRAME_H_ */

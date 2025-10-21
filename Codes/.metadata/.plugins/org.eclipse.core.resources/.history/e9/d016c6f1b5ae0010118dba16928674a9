@@ -9,6 +9,7 @@
 #define INC_ARQ_H_
 
 #include "stm32c0xx_hal.h"   // adjust to your MCU family
+#include "frame.h"
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
@@ -55,10 +56,21 @@ typedef struct {
     uint8_t  pending_seq;
     uint8_t  retries_left;
     uint32_t t_expire_ms;
-
     uint8_t  frame[1 + 1 + 2 + MAX_PAYLOAD + 2 + 1]; // full wire buffer
     uint16_t frame_len;
 } ArqTx;
+
+
+typedef enum { ARQ_EVT_NONE=0, ARQ_EVT_DATA, ARQ_EVT_ACK, ARQ_EVT_NAK, ARQ_EVT_PING, ARQ_EVT_PONG } ArqEvent;
+
+typedef struct {
+    uint8_t  msg_type;   // same as your header
+    uint8_t  seq;
+    uint8_t  flags;
+    const uint8_t* user; // only valid for ARQ_EVT_DATA
+    uint16_t user_len;
+} ArqInd;
+
 
 // Global context (keep if you want a single channel)
 extern ArqTx arq;
@@ -71,8 +83,8 @@ uint16_t Build_Data( uint8_t seq, bool req_ack,const uint8_t* user, uint16_t use
 uint16_t Build_ACK (uint8_t seq, uint8_t* frame_out, uint16_t cap);
 uint16_t Build_NAK ( uint8_t seq, uint8_t* frame_out, uint16_t cap);
 
-// Handle a validated received frame (payload already CRC-checked by your parser)
-bool Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t len,uint8_t* txbuf, uint16_t txcap);
+// auto_ack: if true, ARQ replies with ACK when needed; if false, you’ll do it.
+ArqEvent Handle_Frame(UART_HandleTypeDef* huart_tx, const uint8_t* payload, uint16_t len, bool auto_ack, uint8_t* txbuf, uint16_t txcap, ArqInd* out);
 
 // ARQ sender (stop-and-wait)
 bool ARQ_SendReliable(UART_HandleTypeDef* huart, const uint8_t* user, uint16_t ulen);
@@ -84,16 +96,6 @@ void ARQ_OnNakReceived(uint8_t seq);
 
 // Optional (only used if you use PING/PONG)
 void ARQ_OnPong(uint8_t seq);
-
-// ---- TX primitives you must provide (from your comms layer) ----
-// Build the on-wire frame (adds SYNC, LEN, CRC, END around payload)
-uint16_t UART_BuildFrame(const uint8_t* payload, uint16_t plen,
-                         uint8_t* out, uint16_t out_cap);
-
-// Transmit an already-built frame via a chosen UART (blocking or wrap your DMA)
-bool Comms_SendFrame(UART_HandleTypeDef* huart,
-                     const uint8_t* frame, uint16_t len,
-                     uint32_t timeout_ms);
 
 
 #endif /* INC_ARQ_H_ */

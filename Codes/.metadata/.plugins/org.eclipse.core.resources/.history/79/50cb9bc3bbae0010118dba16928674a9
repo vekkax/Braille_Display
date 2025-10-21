@@ -293,7 +293,7 @@ static void handle_seq_relay(const char* s, LinkId from){
 
 	if (from == LINK_LEFT && uart_right){
 	        Logic_SendReliable(uart_right, (uint8_t*)out, (uint16_t)n);
-	   }
+	    }
 
 }
 
@@ -330,7 +330,7 @@ void Logic_Process(void){
 	InMsg *m;
 
 	while(inbox_peek(&m)){
-		char tmp[32] = {'\0'};
+		char tmp[32];
 		uint16_t L = m->len < sizeof(tmp)-1 ? m->len : sizeof(tmp)-1;
 		memcpy(tmp, m->buf, L);
 		tmp[L] = '\0';
@@ -380,7 +380,6 @@ void Logic_Process(void){
 
 	        case STATE_SHUTDOWN:
 	            // Solo atiende RESET (ya manejado más arriba en el loop)
-	        	handle_reset_all();
 	            break;
 	    }
 }

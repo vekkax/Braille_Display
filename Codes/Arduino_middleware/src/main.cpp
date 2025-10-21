@@ -33,7 +33,7 @@ void setup(){
   while(!Serial){}
 
   // Cadena <-> Master
-  Serial1.begin(CHAIN_BAUD);
+  Serial1.begin(CHAIN_BAUD); // pins TX1/RX1
   huart_chain.ser  = reinterpret_cast<void*>(&Serial1);
   huart_chain.baud = CHAIN_BAUD;
 
@@ -42,7 +42,7 @@ void setup(){
   ARQ_Init();
 
   logPC("READY Master");
-  logPC("Use commands: SET WORD HOLA | SET INDEX 2301 | SEND START | SEND RESET | STATUS");
+  logPC("Use commands: SET WORD HOLA | SET INDEX 2301 | SEND START | SEND RESET | STATUS | SEND SEQ | SEND WIN");
 }
 
 // ---------- RX desde la cadena ----------
@@ -124,6 +124,10 @@ static void handle_pc_line(const String& line){
     if (send_reliable_str("START")){ Serial.println("OK START_SENT"); game_started=true; }
     else Serial.println("ERR START_SEND");
   }
+  else if (line == "SEND WIN"){
+    if (send_reliable_str("WIN")){ Serial.println("OK WIN_SENT"); game_started=true; }
+    else Serial.println("ERR WIN_SEND");
+  }
   else if (line == "SEND RESET"){
     if (send_reliable_str("RESET")){
       Serial.println("OK RESET_SENT");
@@ -133,6 +137,14 @@ static void handle_pc_line(const String& line){
   else if (line == "STATUS"){
     Serial.print("STATUS ready_count="); Serial.print(ready_count);
     Serial.print(" game_started="); Serial.println(game_started ? "1":"0");
+  }
+  else if (line.startsWith("SEND SEQ ")){
+    String w = line.substring(9);
+    w.trim();
+    if (w.length() != 4){ Serial.println("ERR SEQ len!=4"); return; }
+    char cmd[16]; snprintf(cmd, sizeof(cmd), "SEQ:%s", w.c_str());
+    if (send_reliable_str(cmd)) Serial.println("OK SEQ_SENT");
+    else Serial.println("ERR SEQ_SEND");
   }
   else {
     Serial.println("ERR UNKNOWN_CMD");

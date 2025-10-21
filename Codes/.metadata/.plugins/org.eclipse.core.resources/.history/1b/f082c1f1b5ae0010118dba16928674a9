@@ -185,11 +185,6 @@ static void handle_reset_all(void){
 	memset(original_word, 0, sizeof(original_word));
 	word_len = 0;
 
-	FP_Init(&fp_left, payload_left, sizeof(payload_left));
-	FP_Init(&fp_right, payload_right, sizeof(payload_right));
-
-	ARQ_Init();
-
 }
 
 static void maybe_send_ready(void){
@@ -237,7 +232,7 @@ static void handle_index_from_left(char* s_mut){
 
 	// role flags
 	is_first =  (my_index == 0);
-	is_anchor = (my_index ==(MAX_WORD_LENGTH-1));
+	is_anchor = (word_len ? (my_index ==(word_len-1)): false);
 
 	// if have word assign letter
 	if(have_word && my_index < word_len){
@@ -293,7 +288,7 @@ static void handle_seq_relay(const char* s, LinkId from){
 
 	if (from == LINK_LEFT && uart_right){
 	        Logic_SendReliable(uart_right, (uint8_t*)out, (uint16_t)n);
-	   }
+	    }
 
 }
 
@@ -330,7 +325,7 @@ void Logic_Process(void){
 	InMsg *m;
 
 	while(inbox_peek(&m)){
-		char tmp[32] = {'\0'};
+		char tmp[256];
 		uint16_t L = m->len < sizeof(tmp)-1 ? m->len : sizeof(tmp)-1;
 		memcpy(tmp, m->buf, L);
 		tmp[L] = '\0';
@@ -380,7 +375,6 @@ void Logic_Process(void){
 
 	        case STATE_SHUTDOWN:
 	            // Solo atiende RESET (ya manejado más arriba en el loop)
-	        	handle_reset_all();
 	            break;
 	    }
 }
