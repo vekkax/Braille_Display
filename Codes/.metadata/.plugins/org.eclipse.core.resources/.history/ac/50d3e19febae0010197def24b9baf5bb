@@ -80,7 +80,7 @@ static bool UpdateBuzzer(void){
 
 static bool inbox_push(const uint8_t *p, uint16_t n, uint8_t seq, uint8_t flags, LinkId link, UART_HandleTypeDef* reply) {
 
-	if(!p || !n)return false;
+	if(!p || !n)return true;
     if ((n > sizeof(inbox[0].buf) )|| (in_n >= INBOX_CAP)) return false;
 
     InMsg *m = &inbox[in_w];
@@ -124,7 +124,7 @@ static void PumpParser(FrameParser* fp, CircularBuffer* cb, UART_HandleTypeDef* 
             	(void)inbox_push(ind.user, ind.user_len, ind.seq, ind.flags, link_id, reply_uart);
             }
 
-            FP_Init(fp, fp->out, fp->out_cap);
+            FP_Init(fp, fp->out, fp->len);
         }
     }
 }
@@ -190,13 +190,6 @@ static void handle_reset_all(void){
 
 	ARQ_Init();
 
-	in_w = in_r = in_n = 0;
-
-	CircularBuffer_Init(&circ_left);
-	CircularBuffer_Init(&circ_right);
-
-	HAL_UART_Receive_IT(uart_left,  &uart_byte_left,  1);
-	HAL_UART_Receive_IT(uart_right, &uart_byte_right, 1);
 }
 
 static void maybe_send_ready(void){
@@ -222,7 +215,6 @@ static void handle_word_from_left(const char* s){
 
 	// if i have the index recover letter
 	if (have_index && my_index < word_len){
-		is_anchor = (my_index == (word_len - 1));
 		my_letter = original_word[my_index];
 		Braille_Display(my_letter);
 	}
@@ -245,7 +237,7 @@ static void handle_index_from_left(char* s_mut){
 
 	// role flags
 	is_first =  (my_index == 0);
-	is_anchor = (have_word ? (my_index == (word_len-1)) : false);
+	is_anchor = (my_index ==(MAX_WORD_LENGTH-1));
 
 	// if have word assign letter
 	if(have_word && my_index < word_len){
