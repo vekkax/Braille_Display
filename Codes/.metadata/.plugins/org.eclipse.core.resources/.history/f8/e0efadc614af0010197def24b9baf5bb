@@ -55,13 +55,6 @@ typedef struct{
 	UART_HandleTypeDef* reply;
 }InMsg;
 
-typedef struct {
-    UART_HandleTypeDef* huart;
-    uint16_t len;
-    char buf[64];       // plenty for "INDEX:xxx", "WORD:xxxx", "SEQ:xxxx", etc.
-    bool active;
-} PendingTx;
-
 extern volatile GameState logic_state;
 extern volatile char my_letter;
 extern char original_word[MAX_WORD_LENGTH + 1];

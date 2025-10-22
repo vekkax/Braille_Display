@@ -143,7 +143,7 @@ void ARQ_Tick(void) {
 				} else {
 					arq.retries_left--;
 					// mark header as retransmission (flags is byte 2 of RHdr)
-					((RHdr*)(arq.frame + 1 + 1 + 2 ))->flags |= FLAG_IS_RETX;
+					((RHdr*)(arq.frame + 1 + 1 ))->flags |= FLAG_IS_RETX;
 					(void)Comms_SendFrame(arq.huart_tx, arq.frame, arq.frame_len, 100);
 					arq.t_expire_ms = NowMs() + ACK_TIMEOUT_MS;
 					arq.st = S_RETX;

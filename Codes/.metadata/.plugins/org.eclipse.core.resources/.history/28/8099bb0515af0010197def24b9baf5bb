@@ -30,12 +30,6 @@ static InMsg inbox[INBOX_CAP];
 static uint8_t in_w=0, in_r=0, in_n=0;
 static PendingTx pend_left = {0};
 static PendingTx pend_right = {0};
-static ArqTx arq_left_ctx = {0};
-static ArqTx arq_right_ctx = {0};
-
-extern ArqTx arq;
-static inline void arq_swap_in(ArqTx* ctx)  { memcpy(&arq, ctx, sizeof(arq)); }
-static inline void arq_swap_out(ArqTx* ctx) { memcpy(ctx,  &arq, sizeof(arq)); }
 
 volatile char my_letter = '\0';
 char original_word[MAX_WORD_LENGTH+1] = {0};
@@ -53,9 +47,6 @@ static uint32_t t_next_seq_ms = 0;
 
 static uint8_t payload_left[UART_BUFFER_SIZE];
 static uint8_t payload_right[UART_BUFFER_SIZE];
-// Top-level statics next to payload_left/right:
-static uint8_t ackbuf_left[1 + 1 + 2 + MAX_PAYLOAD + 2 + 1];
-static uint8_t ackbuf_right[1 + 1 + 2 + MAX_PAYLOAD + 2 + 1];
 
 // ------------- Utils -------------
 // get current time in ms
@@ -89,116 +80,66 @@ static bool UpdateBuzzer(void){
 	return false;
 }
 
-// ------------- Inbox -------------
-static bool inbox_push(const uint8_t *p, uint16_t n, uint8_t seq, uint8_t flags, LinkId link, UART_HandleTypeDef* reply){
-    if (!p || n == 0) return false;                     // <-- reject empties
-    if (n > sizeof(inbox[0].buf) || in_n >= INBOX_CAP) return false;
+static bool inbox_push(const uint8_t *p, uint16_t n, uint8_t seq, uint8_t flags, LinkId link, UART_HandleTypeDef* reply) {
+
+	if(!p || !n)return false;
+    if ((n > sizeof(inbox[0].buf) )|| (in_n >= INBOX_CAP)) return false;
 
     InMsg *m = &inbox[in_w];
-    memcpy(m->buf, p, n);
-    m->len  = n;
-    m->seq  = seq;
-    m->flags= flags;
-    m->link = link;
-    m->reply= reply;
 
-    in_w = (uint8_t)((in_w + 1) % INBOX_CAP);
+    memcpy(m->buf, p, n);
+    m->len = n;
+    m->seq = seq;
+    m->flags = flags;
+    m->link = link;
+    m->reply = reply;
+
+    in_w = (uint8_t)((in_w + 1)% INBOX_CAP);
     in_n++;
     return true;
 }
 
 static inline bool inbox_peek(InMsg **out) {
-	if (in_n==0) return false;
+	if (!in_n) return false;
 
 	*out = &inbox[in_r];
 	return true;
 }
 
 static inline void inbox_pop(void) {
-	if (in_n ==0)return;
-
+	if (in_n) {
 		in_r = (uint8_t)((in_r + 1) % INBOX_CAP);
 		in_n--;
-
+	}
 }
 
 // ------------- ARQ + Parser pump -------------
 static void PumpParser(FrameParser* fp, CircularBuffer* cb, UART_HandleTypeDef* reply_uart, LinkId link_id) {
     while (1) {
         FrameParserState st = FP_Tick(fp, cb);
-
         if (st == NO_DATA) break;
-
         if (st == GOOD_FRAME) {
-            ArqInd ind = {0};
-            uint8_t* ackbuf = (link_id == LINK_LEFT) ? ackbuf_left : ackbuf_right;
-            uint16_t ackcap = (link_id == LINK_LEFT) ? sizeof(ackbuf_left) : sizeof(ackbuf_right);
-
-            // save current global ARQ, swap in ONLY the ctx for this link
-			ArqTx arq_save;
-			memcpy(&arq_save, &arq, sizeof(arq));
-			if (link_id == LINK_LEFT)  arq_swap_in(&arq_left_ctx);
-			else                       arq_swap_in(&arq_right_ctx);
-
-			// process the just-parsed frame once
-			ArqEvent ev = Handle_Frame(reply_uart, fp->out, fp->len,true /* auto-ack */, ackbuf, ackcap, &ind);
-
-			// swap out the same ctx we swapped in
-			if (link_id == LINK_LEFT)  arq_swap_out(&arq_left_ctx);
-			else                       arq_swap_out(&arq_right_ctx);
-			memcpy(&arq, &arq_save, sizeof(arq));
+            ArqInd ind;
+            ArqEvent ev = Handle_Frame(reply_uart, fp->out, fp->len, true /*auto-ack*/, arq.frame, sizeof(arq.frame), &ind);
 
             if (ev == ARQ_EVT_DATA && ind.user && ind.user_len) {
             	(void)inbox_push(ind.user, ind.user_len, ind.seq, ind.flags, link_id, reply_uart);
             }
-
 
             FP_Init(fp, fp->out, fp->out_cap);
         }
     }
 }
 
-static bool ARQ_SendReliable_ctx(ArqTx* ctx, UART_HandleTypeDef* huart, const uint8_t* user, uint16_t ulen){
-    ArqTx save; memcpy(&save, &arq, sizeof(arq));   // preserve whichever ctx is currently in 'arq'
-    arq_swap_in(ctx);
-    bool ok = ARQ_SendReliable(huart, user, ulen);
-    arq_swap_out(ctx);
-    memcpy(&arq, &save, sizeof(arq));
-    return ok;
-}
-
-static void ARQ_Tick_ctx(ArqTx* ctx){
-    ArqTx save; memcpy(&save, &arq, sizeof(arq));
-    arq_swap_in(ctx);
-    ARQ_Tick();
-    arq_swap_out(ctx);
-    memcpy(&arq, &save, sizeof(arq));
-}
-
-static inline void ARQ_Tick_Both(void){
-    ARQ_Tick_ctx(&arq_left_ctx);
-    ARQ_Tick_ctx(&arq_right_ctx);
-}
-
-// per-link init wrapper
-static void ARQ_Init_ctx(ArqTx* ctx){
-    ArqTx save; memcpy(&save, &arq, sizeof(arq));
-    arq_swap_in(ctx);
-    ARQ_Init();                // <- your original arq.c initializer
-    arq_swap_out(ctx);
-    memcpy(&arq, &save, sizeof(arq));
-}
-
 // ------------- TX helpers (ARQ) -------------
-// replace this whole block
-static bool try_send_str_ctx(ArqTx* ctx, UART_HandleTypeDef* huart, const char* s, PendingTx* pend){
-    if (!ctx || !huart || !s) return false;
+static bool try_send_str(UART_HandleTypeDef* huart, const char* s, PendingTx* pend){
+    if (!huart || !s) return false;
+
     uint16_t n = (uint16_t)strlen(s);
+    // First, try immediately
+    if (ARQ_SendReliable(huart, (const uint8_t*)s, n)) return true;
 
-    // Try immediately using the correct per-link ARQ context
-    if (ARQ_SendReliable_ctx(ctx, huart, (const uint8_t*)s, n)) return true;
-
-    // If ARQ is busy, store one pending message for this link
+    // If ARQ is busy, store it (only if slot is free)
     if (!pend->active) {
         pend->huart = huart;
         pend->len = (n < sizeof(pend->buf)) ? n : (sizeof(pend->buf)-1);
@@ -209,12 +150,13 @@ static bool try_send_str_ctx(ArqTx* ctx, UART_HandleTypeDef* huart, const char* 
     return false;
 }
 
-static inline bool send_left_str (const char* s){
-    return try_send_str_ctx(&arq_left_ctx,  uart_left,  s, &pend_left);
+static inline bool send_left_str(const char* s){
+    return try_send_str(uart_left, s, &pend_left);
 }
 static inline bool send_right_str(const char* s){
-    return try_send_str_ctx(&arq_right_ctx, uart_right, s, &pend_right);
+    return try_send_str(uart_right, s, &pend_right);
 }
+
 
 // ------------- RX IRQ hook -------------
 void Logic_OnUARTReceive(UART_HandleTypeDef* huart) {
@@ -240,15 +182,7 @@ void Logic_Init(UART_HandleTypeDef* huart_left_in, UART_HandleTypeDef* huart_rig
 	FP_Init(&fp_left, payload_left, sizeof(payload_left));
 	FP_Init(&fp_right, payload_right, sizeof(payload_right));
 
-	// --- ARQ per-link: full clean init
-	memset(&arq_left_ctx,  0, sizeof(arq_left_ctx));
-	memset(&arq_right_ctx, 0, sizeof(arq_right_ctx));
-	ARQ_Init_ctx(&arq_left_ctx);
-	ARQ_Init_ctx(&arq_right_ctx);
-
-	// optional: bind default UARTs in contexts (not strictly required)
-	arq_left_ctx.huart_tx  = uart_left;
-	arq_right_ctx.huart_tx = uart_right;
+	ARQ_Init();
 
 	HAL_UART_Receive_IT(uart_left, &uart_byte_left, 1);  // antes: UART_BUFFER_SIZE
 	HAL_UART_Receive_IT(uart_right, &uart_byte_right, 1);
@@ -272,19 +206,12 @@ static void handle_reset_all(void){
 	FP_Init(&fp_left, payload_left, sizeof(payload_left));
 	FP_Init(&fp_right, payload_right, sizeof(payload_right));
 
+	ARQ_Init();
 
 	in_w = in_r = in_n = 0;
 
 	CircularBuffer_Init(&circ_left);
 	CircularBuffer_Init(&circ_right);
-
-	// --- per-link ARQ contexts back to idle
-	memset(&arq_left_ctx,  0, sizeof(arq_left_ctx));
-	memset(&arq_right_ctx, 0, sizeof(arq_right_ctx));
-	ARQ_Init_ctx(&arq_left_ctx);
-	ARQ_Init_ctx(&arq_right_ctx);
-	arq_left_ctx.huart_tx  = uart_left;
-	arq_right_ctx.huart_tx = uart_right;
 
 	HAL_UART_Receive_IT(uart_left,  &uart_byte_left,  1);
 	HAL_UART_Receive_IT(uart_right, &uart_byte_right, 1);
@@ -301,6 +228,7 @@ static void maybe_send_ready(void){
 static void relay_ready_from_right(){
 	send_left_str("READY");
 }
+
 
 static void handle_word_from_left(const char* s){
 	// s = "WORD:XXXX"
@@ -376,7 +304,7 @@ static void handle_seq_relay(const char* s, LinkId from){
 	char out[UART_BUFFER_SIZE];
 
 	//concatenate
-	snprintf(out, sizeof(out), "SEQ:%s%c", seq, (my_letter ? my_letter : '?'));
+	int n = snprintf(out, sizeof(out), "SEQ:%s%c", seq, (my_letter ? my_letter : '?'));
 
 	// if anchor, correct length and correct word then win
 	if(is_anchor && have_word){
@@ -390,7 +318,7 @@ static void handle_seq_relay(const char* s, LinkId from){
 	}
 
 	if (from == LINK_LEFT && uart_right){
-	        send_right_str(out);
+	        Logic_SendReliable(uart_right, (uint8_t*)out, (uint16_t)n);
 	   }
 
 }
@@ -423,11 +351,15 @@ void Logic_Process(void){
 	if (uart_right) PumpParser(&fp_right, &circ_right, uart_right, LINK_RIGHT);
 
 	// ARQ timers (retries/timeouts)
-	ARQ_Tick_Both();
+	ARQ_Tick();
 
 	// Try to flush pending sends (non-blocking)
-	if (pend_left.active  && ARQ_SendReliable_ctx(&arq_left_ctx,  pend_left.huart,  (uint8_t*)pend_left.buf,  pend_left.len))  pend_left.active  = false;
-	if (pend_right.active && ARQ_SendReliable_ctx(&arq_right_ctx, pend_right.huart, (uint8_t*)pend_right.buf, pend_right.len)) pend_right.active = false;
+	if (pend_left.active && ARQ_SendReliable(pend_left.huart, (uint8_t*)pend_left.buf, pend_left.len)) {
+		pend_left.active = false;
+	}
+	if (pend_right.active && ARQ_SendReliable(pend_right.huart, (uint8_t*)pend_right.buf, pend_right.len)) {
+		pend_right.active = false;
+	}
 
 	InMsg *m;
 
