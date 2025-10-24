@@ -1,0 +1,85 @@
+@startuml Assignemet sequence
+skinparam sequenceArrowThickness 1
+skinparam sequenceMessageAlign center
+skinparam ParticipantPadding 15
+skinparam BoxPadding 10
+skinparam actorStyle awesome
+skinparam ArrowColor #4B6
+actor "Asignador (Maestro Temporal)" as M
+participant "Módulo 1" as A
+participant "Módulo 2" as B
+participant "Modulo i" as i
+
+activate A
+activate B
+activate i
+== Asignment ==
+M -> A : DATA "WORD:XX..." (ARQ)
+A --> M : ACK
+hnote over A: ""//have_word//"" **raised** \n""//original_word[i]= "XX..."//""
+A -> B : DATA "WORD:XX..." (ARQ, relay)
+B --> A : ACK
+hnote over B: ""//have_word//"" **raised** \n""//original_word[i]= "XX..."//""
+B -> i : DATA "WORD:XX..." (ARQ, relay)
+i --> B : ACK
+hnote over i: ""//have_word//"" **raised** \n""//original_word[i]= "XX..."//""
+
+M -> A : DATA "INDEX:<index sequence>" (ARQ)
+A --> M : ACK
+hnote over A: ""//have_index//"" **raised** \n""//my_index= "XX..."//""\n""//my_letter= original_word[my_index]//""
+hnote over A: is_first = (my_index == 0) ? true : false
+hnote over A: is_anchor = (my_index == i) ? true : false
+hnote over A: **READY**
+
+
+A -> B : DATA "INDEX:<index sequence with my index removed>" (ARQ, relay)
+B --> A : ACK
+hnote over B: ""//have_index//"" **raised** \n""//my_index= "XX..."//""\n""//my_letter= original_word[my_index]//""
+hnote over B: is_first = (my_index == 0) ? true : false
+hnote over B: is_anchor = (my_index == i) ? true : false
+hnote over B: **READY**
+
+
+B -> i : DATA "INDEX:<index sequence with my index removed>" (ARQ, relay)
+i --> B : ACK
+hnote over i: ""//have_index//"" **raised** \n""//my_index= "XX..."//""\n""//my_letter= original_word[my_index]//""
+hnote over i: is_first = (my_index == 0) ? true : false
+hnote over i: is_anchor = (my_index == i) ? true : false
+hnote over i: **READY**
+
+
+
+== Ready ==
+A -> M : DATA "READY" (ARQ)
+M --> A : ACK
+hnote over M: ""ready_count=1""
+
+B -> A : DATA "READY" (ARQ)
+A --> B : ACK
+A -> M : DATA "READY" (ARQ, relay)
+M --> A : ACK
+hnote over M: ""ready_count++""
+
+i -> B : DATA "READY" (ARQ)
+B --> i : ACK
+B -> A : DATA "READY" (ARQ, relay)
+A --> B : ACK
+A -> M : DATA "READY" (ARQ, relay)
+M --> A : ACK
+hnote over M: ""ready_count++""
+
+== Start ==
+hnote over M: ""ready_count ==  i""
+M -> A : DATA "START" (ARQ)
+A --> M : ACK
+hnote over A: **START**
+A -> B : DATA "START" (ARQ, relay)
+B --> A : ACK
+hnote over B: **START**
+B -> i : DATA "START" (ARQ, relay)
+i --> B : ACK
+hnote over i: **START**
+
+== Game Sequence==
+
+@enduml

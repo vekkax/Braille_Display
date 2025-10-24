@@ -1,0 +1,53 @@
+@startuml GAME_STATE and SEq handling
+start
+while (inbox not empty)
+    :extract message;
+  
+    if (cmd == SEQ) then (yes)
+        partition handle_seq_relay(){
+        :sequence = "XX...";
+        :add **//my_letter//** to sequence;
+
+        if(is_anchor?) then (true)
+            if(sequence == original_word) then (true)
+                :send_right_str("WIN");
+                :logic_state -> STATE_SUCCESS;
+                goto inbox
+            endif
+        endif
+    
+        :send_right_str("SEQ:(sequence)");
+        
+    }
+    elseif (cmd == WIN) then (yes)
+        partition handle_win_any_side(){
+        :send_right_str("WIN");
+        :logic_state -> STATE_SUCCESS;
+        
+        }
+    endif
+    
+    :inbox_pop();
+    
+endwhile
+
+
+switch (logic_state)
+case (STATE_GAME)
+partition first_try_kick_seq(){
+    if (is_first?) then (true)
+        if(current_time >= seqence_timer?) then (yes)
+            :send_right_str("SEQ:(my_letter)");
+            :sequence_timer = current time + SEQ_RETRY_MS;
+        endif
+    endif
+    }
+case (STATE_SUCCESS)
+    :logic_state → SHUTDOWN;
+    :beep SUCCESS;
+case (STATE_SHUTDOWN)
+    :handle_reset_all();
+endswitch
+
+stop
+@enduml

@@ -1,0 +1,56 @@
+@startuml
+start
+:IRQ RX (LEFT/RIGHT) → push to CircularBuffer;
+:Loop main;
+:PumpParser(RIGHT) and PumpParser(LEFT);
+
+partition PumpParser(){
+if (FP_Tick == GOOD_FRAME?) then (sí)
+:Handle_Frame(auto_ack=true);
+if (ARQ_EVT_DATA) then (sí)
+:inbox_push(user,len,seq,link);
+endif
+:FP_Init();
+endif
+}
+
+:ARQ_Tick (left & right);
+:Flush pending TX if ARQ is idle;
+
+
+while (inbox not empty)
+:extract message;
+if (cmd==RESET) then
+:relay RESET al otro lado;
+:handle_reset_all();
+elseif (cmd==WORD && link==LEFT) then
+:handle_word_from_left();
+elseif (cmd==INDEX && link==LEFT) then
+:handle_index_from_left();
+elseif (cmd==READY && link==RIGHT) then
+:relay_ready_from_right();
+elseif (cmd==START) then
+:handle_start_any_side();
+elseif (cmd==SEQ) then
+:handle_seq_relay();
+elseif (cmd==WIN) then
+:handle_win_any_side();
+endif
+:inbox_pop();
+endwhile
+
+
+switch (logic_state)
+case (WAIT_ASSIGNMENT)
+:idle;
+case (START)
+:beep READY → GAME;
+case (GAME)
+:first_try_kick_seq();
+case (SUCCESS)
+:beep SUCCESS → SHUTDOWN;
+case (SHUTDOWN)
+:handle_reset_all();
+endswitch
+stop
+@enduml

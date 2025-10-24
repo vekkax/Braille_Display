@@ -1,210 +1,221 @@
-02:31:18 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:09:28 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/logic.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/logic.d" -MT"Core/Src/logic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/logic.o"
-arm-none-eabi-gcc -o "Braille_firmware.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\santiago\Documents\Tesis\Braille_Display\Codes\Braille_firmware\STM32C031G6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Braille_firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Braille_firmware.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "UART_test.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\santiago\Documents\Tesis\Braille_Display\Codes\Test\UART_test\STM32C031G6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_test.elf
  
-arm-none-eabi-size  Braille_firmware.elf 
-arm-none-eabi-objdump -h -S Braille_firmware.elf  > "Braille_firmware.list"
+arm-none-eabi-size  UART_test.elf 
+arm-none-eabi-objdump -h -S UART_test.elf  > "UART_test.list"
    text	   data	    bss	    dec	    hex	filename
-  31920	     96	   3392	  35408	   8a50	Braille_firmware.elf
+  20872	     12	   2124	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-Finished building: Braille_firmware.list
+Finished building: UART_test.list
  
-02:31:24 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:20:16 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  31920	     96	   3392	  35408	   8a50	Braille_firmware.elf
+  20872	     12	   2124	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-02:31:36 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:28:34 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  31920	     96	   3392	  35408	   8a50	Braille_firmware.elf
+  20872	     12	   2124	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-02:32:01 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:29:47 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  31920	     96	   3392	  35408	   8a50	Braille_firmware.elf
+  20872	     12	   2124	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-02:35:15 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:30:06 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  31920	     96	   3392	  35408	   8a50	Braille_firmware.elf
+  20872	     12	   2124	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-02:38:55 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:30:29 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  31920	     96	   3392	  35408	   8a50	Braille_firmware.elf
+  20872	     12	   2124	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-03:40:10 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:38:51 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/logic.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/logic.d" -MT"Core/Src/logic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/logic.o"
-arm-none-eabi-gcc -o "Braille_firmware.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\santiago\Documents\Tesis\Braille_Display\Codes\Braille_firmware\STM32C031G6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Braille_firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Braille_firmware.elf
- 
-arm-none-eabi-size  Braille_firmware.elf 
-arm-none-eabi-objdump -h -S Braille_firmware.elf  > "Braille_firmware.list"
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32528	     96	   3512	  36136	   8d28	Braille_firmware.elf
+  20872	     12	   2124	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-Finished building: Braille_firmware.list
- 
-03:40:26 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:45:25 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32528	     96	   3512	  36136	   8d28	Braille_firmware.elf
+  20872	     12	   2124	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-03:42:38 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:48:53 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:483:48: error: incompatible type for argument 1 of 'UART_Test_RxCallback'
+  483 |     if (huart == &huart1) UART_Test_RxCallback(right_tester);
+      |                                                ^~~~~~~~~~~~
+      |                                                |
+      |                                                UART_TestHandle
+In file included from ../Core/Src/main.c:24:
+../Core/Inc/uart_test.h:30:44: note: expected 'UART_TestHandle *' but argument is of type 'UART_TestHandle'
+   30 | void UART_Test_RxCallback(UART_TestHandle *h);
+      |                           ~~~~~~~~~~~~~~~~~^
+../Core/Src/main.c:484:53: error: incompatible type for argument 1 of 'UART_Test_RxCallback'
+  484 |     else if (huart == &huart2) UART_Test_RxCallback(left_tester);
+      |                                                     ^~~~~~~~~~~
+      |                                                     |
+      |                                                     UART_TestHandle
+../Core/Inc/uart_test.h:30:44: note: expected 'UART_TestHandle *' but argument is of type 'UART_TestHandle'
+   30 | void UART_Test_RxCallback(UART_TestHandle *h);
+      |                           ~~~~~~~~~~~~~~~~~^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:49:25 **** Incremental Build of configuration Debug for project UART_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:483:48: error: incompatible type for argument 1 of 'UART_Test_RxCallback'
+  483 |     if (huart == &huart1) UART_Test_RxCallback(right_tester);
+      |                                                ^~~~~~~~~~~~
+      |                                                |
+      |                                                UART_TestHandle
+In file included from ../Core/Src/main.c:24:
+../Core/Inc/uart_test.h:30:44: note: expected 'UART_TestHandle *' but argument is of type 'UART_TestHandle'
+   30 | void UART_Test_RxCallback(UART_TestHandle *h);
+      |                           ~~~~~~~~~~~~~~~~~^
+../Core/Src/main.c:484:53: error: incompatible type for argument 1 of 'UART_Test_RxCallback'
+  484 |     else if (huart == &huart2) UART_Test_RxCallback(left_tester);
+      |                                                     ^~~~~~~~~~~
+      |                                                     |
+      |                                                     UART_TestHandle
+../Core/Inc/uart_test.h:30:44: note: expected 'UART_TestHandle *' but argument is of type 'UART_TestHandle'
+   30 | void UART_Test_RxCallback(UART_TestHandle *h);
+      |                           ~~~~~~~~~~~~~~~~~^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:50:12 **** Incremental Build of configuration Debug for project UART_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "UART_test.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\santiago\Documents\Tesis\Braille_Display\Codes\Test\UART_test\STM32C031G6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_test.elf
+ 
+arm-none-eabi-size  UART_test.elf 
+arm-none-eabi-objdump -h -S UART_test.elf  > "UART_test.list"
    text	   data	    bss	    dec	    hex	filename
-  32528	     96	   3512	  36136	   8d28	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-03:42:53 **** Incremental Build of configuration Debug for project Braille_firmware ****
+Finished building: UART_test.list
+ 
+16:51:35 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32528	     96	   3512	  36136	   8d28	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-03:51:51 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:54:23 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32528	     96	   3512	  36136	   8d28	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-03:52:14 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:56:13 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32528	     96	   3512	  36136	   8d28	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-03:53:33 **** Incremental Build of configuration Debug for project Braille_firmware ****
+16:57:22 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32528	     96	   3512	  36136	   8d28	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-03:55:31 **** Incremental Build of configuration Debug for project Braille_firmware ****
+17:02:13 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32528	     96	   3512	  36136	   8d28	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-04:10:37 **** Incremental Build of configuration Debug for project Braille_firmware ****
+17:02:27 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/logic.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/logic.d" -MT"Core/Src/logic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/logic.o"
-arm-none-eabi-gcc -o "Braille_firmware.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\santiago\Documents\Tesis\Braille_Display\Codes\Braille_firmware\STM32C031G6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Braille_firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Braille_firmware.elf
- 
-arm-none-eabi-size  Braille_firmware.elf 
-arm-none-eabi-objdump -h -S Braille_firmware.elf  > "Braille_firmware.list"
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32532	     96	   3512	  36140	   8d2c	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-Finished building: Braille_firmware.list
- 
-04:10:52 **** Incremental Build of configuration Debug for project Braille_firmware ****
+17:03:55 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32532	     96	   3512	  36140	   8d2c	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-04:11:12 **** Incremental Build of configuration Debug for project Braille_firmware ****
+17:34:03 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32532	     96	   3512	  36140	   8d2c	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-04:11:58 **** Incremental Build of configuration Debug for project Braille_firmware ****
+17:34:40 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32532	     96	   3512	  36140	   8d2c	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-04:12:22 **** Incremental Build of configuration Debug for project Braille_firmware ****
+17:34:54 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32532	     96	   3512	  36140	   8d2c	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-04:12:52 **** Incremental Build of configuration Debug for project Braille_firmware ****
+17:35:07 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32532	     96	   3512	  36140	   8d2c	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-04:26:10 **** Incremental Build of configuration Debug for project Braille_firmware ****
+17:35:16 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/logic.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C031xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/logic.d" -MT"Core/Src/logic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/logic.o"
-arm-none-eabi-gcc -o "Braille_firmware.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\santiago\Documents\Tesis\Braille_Display\Codes\Braille_firmware\STM32C031G6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Braille_firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Braille_firmware.elf
- 
-arm-none-eabi-size  Braille_firmware.elf 
-arm-none-eabi-objdump -h -S Braille_firmware.elf  > "Braille_firmware.list"
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32544	     96	   3512	  36152	   8d38	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-Finished building: Braille_firmware.list
- 
-04:26:31 **** Incremental Build of configuration Debug for project Braille_firmware ****
+17:35:31 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32544	     96	   3512	  36152	   8d38	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  
-04:26:50 **** Incremental Build of configuration Debug for project Braille_firmware ****
+18:06:31 **** Incremental Build of configuration Debug for project UART_test ****
 make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
+arm-none-eabi-size  UART_test.elf 
    text	   data	    bss	    dec	    hex	filename
-  32544	     96	   3512	  36152	   8d38	Braille_firmware.elf
-Finished building: default.size.stdout
- 
-04:29:11 **** Incremental Build of configuration Debug for project Braille_firmware ****
-make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
-   text	   data	    bss	    dec	    hex	filename
-  32544	     96	   3512	  36152	   8d38	Braille_firmware.elf
-Finished building: default.size.stdout
- 
-04:31:07 **** Incremental Build of configuration Debug for project Braille_firmware ****
-make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
-   text	   data	    bss	    dec	    hex	filename
-  32544	     96	   3512	  36152	   8d38	Braille_firmware.elf
-Finished building: default.size.stdout
- 
-04:33:49 **** Incremental Build of configuration Debug for project Braille_firmware ****
-make -j12 all 
-arm-none-eabi-size  Braille_firmware.elf 
-   text	   data	    bss	    dec	    hex	filename
-  32544	     96	   3512	  36152	   8d38	Braille_firmware.elf
+  20864	     12	   2132	  23008	   59e0	UART_test.elf
 Finished building: default.size.stdout
  

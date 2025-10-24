@@ -12,6 +12,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Braille_firmware\ Debug/activeL
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Braille_firmware/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DIsc_blink\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DIsc_blink\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:UART_test\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:beep_AGV\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:beep_AGV\ Debug/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:Braille_firmware\ Debug/activeLaunchMode=debug

@@ -1,0 +1,62 @@
+@startuml
+
+skinparam ArrowColor #999
+skinparam Padding 5
+skinparam dpi 180
+
+
+' ====== BLOQUES EN SERIE ======
+
+rectangle "SYNC1 0xFF" as SY1 #D6F5D6
+rectangle "SYNC2 0x5A" as SY2 #D6F5D6
+rectangle "LEN_L" as LL #F0F8FF
+rectangle "LEN_H" as LH #F0F8FF
+rectangle "RHdr" as RH #FFF4D6
+rectangle "user_data (0..N-3 B)" as UD #FFFFFF
+rectangle "CRC_L" as CL #FFE6E6
+rectangle "CRC_H" as CH #FFE6E6
+rectangle "END 0x00" as EOF #EDEDED
+
+
+' Disposición horizontal
+
+SY1 -right- SY2
+SY2 -right- LL
+LL -right- LH
+LH -right- RH
+RH -right- UD
+UD -right- CL
+CL -right- CH
+CH -right- EOF
+
+
+' ====== ETIQUETAS SUPERIORES (como en el diagrama CAN) ======
+' Usamos notas arriba para rotular cada campo
+
+note top of SY1 : Sync Byte 1\n[1 byte]
+note top of SY2 : Sync Byte 2\n[1 byte]
+note top of LL : Data Length Low\n[1 byte]
+note top of LH : Data Length High\n[1 byte]
+note top of RH : ARQ Header (RHdr)\n[3 bytes]
+note top of UD : Payload (Usuario)\n[LEN - 3 bytes]
+note top of CL : CRC Low\n[1 byte]
+note top of CH : CRC High\n[1 byte]
+note top of EOF : End Of Frame
+
+
+' ====== AGRUPACIONES INFERIORES (estilo "Arbitration/ACK/CRC" del CAN) ======
+' Dibujamos llaves con notas inferiores abarcar rangos
+' 1) Cabecera de enlace (alineación/sincronismo)
+
+' 2) Longitud
+note bottom of LL #FFFFFF
+Length (Little‑Endian)
+└─ LEN_L + LEN_H = LEN
+end note
+
+
+' 3) Datos
+note bottom of UD #FFFFFF
+Data Field
+end note
+@enduml
