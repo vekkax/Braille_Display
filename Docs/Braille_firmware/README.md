@@ -23,6 +23,9 @@ Provide a robust **on‑wire framing format** and a **byte‑wise parser** for U
 |     7 | `CRC_H`   |            1 | CRC‑16/CCITT high byte.                                                          |
 |     8 | `END`     |            1 | Terminator `0x00`.                                                               |
 
+
+<img src="../Images/Frame.svg">
+
 > **CRC‑16/CCITT**: polynomial `0x1021`, init `0xFFFF`, no final XOR. The CRC is used in two places:
 >
 > 1. **Build time** (`UART_BuildFrame`) to append CRC to TX frames.
@@ -128,6 +131,15 @@ Coordinate the overall behavior (assignment, start, gameplay, success/shutdown).
   * `SEQ:` → concatenate local `my_letter`, forward to RIGHT, and if anchor validate against `original_word` → on match push `WIN` left and transition to SUCCESS.
   * `WIN` → propagate to the other side and transition to SUCCESS.
 * After each dispatch the message is removed with `inbox_pop()`.
+
+The general Workflow of the system is comprised by this
+![General workflow](../Images/GeneralActivity.svg)
+
+More over the assignment process with a temporal master has this structure
+![Assignment](../Images/Assignemet%20sequence.svg)
+
+The process after assignment on the game state and on is then described by this workflow diagram
+![Game_state](../Images/GAME_STATE%20and%20SEq%20handling.svg)
 
 ### ARQ usage from logic
 
